@@ -8,14 +8,14 @@
 }
 
 .profile-headerLabel, .profile-headerLabel > span {
-	color: #D2CAD8 !important;
+	color: $color4 !important;
 }
 
 .profile-headerLogo {
 	margin-top: 0px !important;
 }
 .profile-headerLogo::before {
-	color: #D2CAD8;
+	color: $color4;
 	content: 'Co-Teach Informatica';
 	font-size: 18px;
 	display: inline-block;
@@ -23,7 +23,7 @@
 }
 
 .profile-body { 
-	background-color: #FAF8FC !important;
+	background-color: $color3 !important;
 	color: $color2 !important;
 }
 
@@ -33,13 +33,13 @@
 }
 
 .profile-tile {
-	border-bottom-color: #D2CAD8 !important;
+	border-bottom-color: $color4 !important;
 }
 .profile-tileHeader {
-	background-color: #D2CAD8 !important;
+	background-color: $color4 !important;
 }
 .profile-tileBody {
-	background-color: #FAF8FC !important;
+	background-color: $color3 !important;
 }
 .profile-tile:hover .profile-tileHeader {
 	background-color: $color1 !important;
@@ -56,7 +56,7 @@ div:hover > .profile-tile .profile-tileBody {
 	color: $color1 !important;
 }
 .profile-subheaderLogo {
-	background-color: #D2CAD8 !important;
+	background-color: $color4 !important;
 }
 .lesstof .profile-subheaderType::before {
 	content: $lesstof !important;
@@ -74,4 +74,52 @@ div:hover > .profile-tile .profile-tileBody {
 }
 .profile-navigationSCO::before {
 	content: $sco !important;
+}
+
+.profile-login {
+	background-color: $color3;
+}
+
+.profile-loginPanel {
+    background-color: $color1;
+	color: $color4;
+	
+	button {
+		background-color: $color4;
+		color: $color2;		
+	}
+	
+	input {
+		background-color: $color3;
+		color: $color1;
+	}	
+	input::placeholder {
+			color: $color4;
+	}
+}
+
+.profile-loginLinks {
+	color: $color1;
+	a {
+		color: $color1;
+	}
+}
+
+.profile-loginLogo {
+	display: none;
+}
+
+.profile-loginTitle {
+	&::before {
+		content: "Co-Teach Informatica";
+		width: auto;
+		color: $color1;
+		overflow: visible;
+		font-size: 4em;
+		font-weight: bold;
+		margin-left: -70px;
+	}
+	p {
+		display: none
+	}
 }
