@@ -3,8 +3,13 @@
  */
 
 $color1 : #6D4A8A;
+$color2 : #3D3661;
 
 $toets  : url('toets-inf.svg');
 $lesstof: url('lesstof-inf.svg');
+
+$module: url('module-inf.svg');
+$folder: url('folder-inf.svg');
+$sco:    url('activiteit-inf.svg');
 
 @import "_template.scss";

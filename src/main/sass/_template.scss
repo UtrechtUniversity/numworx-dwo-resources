@@ -24,11 +24,11 @@
 
 .profile-body { 
 	background-color: #FAF8FC !important;
-	color: #3D3661 !important;
+	color: $color2 !important;
 }
 
 .profile-navigation {
-	color: #3D3661 !important;
+	color: $color2 !important;
 	background-color: #F1F0F2 !important;
 }
 
@@ -64,4 +64,14 @@ div:hover > .profile-tile .profile-tileBody {
 
 .toets .profile-subheaderType::before {
 	content: $toets !important;
+}
+
+.profile-navigationFOLDER::before {
+	content: $folder !important;
+}
+.profile-navigationMODULE::before {
+	content: $module !important;
+}
+.profile-navigationSCO::before {
+	content: $sco !important;
 }
