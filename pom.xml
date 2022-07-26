@@ -15,6 +15,7 @@
         <maven-war-plugin.version>2.1.1</maven-war-plugin.version>
 		<wagonPhase>verify</wagonPhase>
 		<s3>s3://ebs-dev-dwo-nl</s3>
+		<s3id>dev</s3id>
     </properties>
     <build>
     	<finalName>${project.artifactId}</finalName>
@@ -68,7 +69,7 @@
 				<configuration>
 					<fromDir>${project.build.directory}/${project.build.finalName}/css</fromDir>
 					<includes>*.css,*.svg</includes>
-					<serverId>dev</serverId>
+					<serverId>${s3id}</serverId>
 					<url>${s3}</url>
 					<toDir>apps/css</toDir>
 				</configuration>
@@ -77,4 +78,14 @@
 
         </plugins>
     </build>
+    <profiles>
+    	<profile>
+    		<id>test</id>
+    		<properties>
+    			<s3>s3://test-dwo-nl</s3>
+    			<s3id>ubuntu</s3id> 		
+    		</properties>
+    	</profile>
+    
+    </profiles>
 </project>
