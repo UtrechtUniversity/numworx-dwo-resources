@@ -1,0 +1,67 @@
+.profile-header {
+        background-color: $color1 !important;
+}
+
+.profile-headerIcon, .profile-headerIcon svg {
+	color: #F6DEE4 !important;
+	fill:  #F6DEE4 !important;
+}
+
+.profile-headerLabel, .profile-headerLabel > span {
+	color: #D2CAD8 !important;
+}
+
+.profile-headerLogo {
+	margin-top: 0px !important;
+}
+.profile-headerLogo::before {
+	color: #D2CAD8;
+	content: 'Co-Teach Informatica';
+	font-size: 18px;
+	display: inline-block;
+	margin-top: 5px !important;
+}
+
+.profile-body { 
+	background-color: #FAF8FC !important;
+	color: #3D3661 !important;
+}
+
+.profile-navigation {
+	color: #3D3661 !important;
+	background-color: #F1F0F2 !important;
+}
+
+.profile-tile {
+	border-bottom-color: #D2CAD8 !important;
+}
+.profile-tileHeader {
+	background-color: #D2CAD8 !important;
+}
+.profile-tileBody {
+	background-color: #FAF8FC !important;
+}
+.profile-tile:hover .profile-tileHeader {
+	background-color: $color1 !important;
+}
+div:hover > .profile-tile .profile-tileBody {
+	border-bottom-color: $color1 !important;
+}
+
+.profile-tileFooter {
+	background-color: transparent !important;
+}
+
+.profile-subheaderLabel {
+	color: $color1 !important;
+}
+.profile-subheaderLogo {
+	background-color: #D2CAD8 !important;
+}
+.lesstof .profile-subheaderType::before {
+	content: $lesstof !important;
+}
+
+.toets .profile-subheaderType::before {
+	content: $toets !important;
+}
