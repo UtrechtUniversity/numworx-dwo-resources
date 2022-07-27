@@ -13,13 +13,16 @@
 
 .profile-headerLogo {
 	margin-top: 0px !important;
+	img {
+		display:none;
+	}
 }
 .profile-headerLogo::before {
 	color: $color4;
 	content: 'Co-Teach Informatica';
 	font-size: 18px;
 	display: inline-block;
-	margin-top: 5px !important;
+	width: 100px;
 }
 
 .profile-body { 
@@ -80,19 +83,30 @@ div:hover > .profile-tile .profile-tileBody {
 	background-color: $color3;
 }
 
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content }
+  &:-moz-placeholder           { @content }
+  &::-moz-placeholder          { @content }
+  &:-ms-input-placeholder      { @content }  
+}
+
+
 .profile-loginPanel {
     background-color: $color1;
 	color: $color4;
 	
-	button {
+	input {
+		background-color: $color3;
+		color: $color1;
+		@include placeholder {
+			color: $color4;
+		}
+	}	
+	button, input[type="submit"] {
 		background-color: $color4;
 		color: $color2;		
 	}
 	
-	input {
-		background-color: $color3;
-		color: $color1;
-	}	
 	input::placeholder {
 			color: $color4;
 	}
