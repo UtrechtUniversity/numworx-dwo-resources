@@ -7,7 +7,7 @@
 	fill:  #F6DEE4 !important;
 }
 
-.profile-headerLabel, .profile-headerLabel > span {
+.profile-headerLabel, .profile-headerLabel > span, .profile-headerLabel >  a {
 	color: $color4 !important;
 }
 
@@ -42,7 +42,7 @@
 	background-color: $color4 !important;
 }
 .profile-tileBody {
-	background-color: $color3 !important;
+	background-color: white !important;
 }
 .profile-tile:hover .profile-tileHeader {
 	background-color: $color1 !important;
@@ -126,12 +126,14 @@ div:hover > .profile-tile .profile-tileBody {
 .profile-loginTitle {
 	&::before {
 		content: "Co-Teach Informatica";
-		width: auto;
+		width: 800px;
 		color: $color1;
 		overflow: visible;
-		font-size: 4em;
+		font-size: 60px;
+		font-family: Ubuntu, sans-serif;
 		font-weight: bold;
 		margin-left: -70px;
+		display: inline-block;
 	}
 	p {
 		display: none
