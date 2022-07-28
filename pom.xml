@@ -16,6 +16,8 @@
 		<wagonPhase>verify</wagonPhase>
 		<s3>s3://ebs-dev-dwo-nl</s3>
 		<s3id>dev</s3id>
+		<remote>scp://gemini.science.uu.nl</remote>
+		<remoteDir>/science/wwwprojects/FI-Sites/www-dev/dwo/apps/css</remoteDir>
     </properties>
     <build>
     	<finalName>${project.artifactId}</finalName>
@@ -85,6 +87,29 @@
     			<s3>s3://test-dwo-nl</s3>
     			<s3id>ubuntu</s3id> 		
     		</properties>
+    		<build>
+    			<plugins>
+    				<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+    					<artifactId>wagon-maven-plugin</artifactId>
+  						<version>1.0</version>
+    					<executions>
+    					 <execution>
+    					 	<id>remote</id>
+	    					<goals>
+	    						<goal>upload</goal>
+	    					</goals>
+	    					<phase>install</phase>
+    						<configuration>
+    							<url>${remote}</url>
+    							<serverId>user</serverId>
+    							<toDir>${remoteDir}</toDir>
+    						</configuration>
+						</execution>
+					</executions>    					
+    				</plugin>    			
+    			</plugins>
+    		</build>
     	</profile>
     
     </profiles>
