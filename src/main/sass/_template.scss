@@ -1,5 +1,7 @@
 .profile-header {
         background-color: $color1 !important;
+		-webkit-box-shadow: none !important;
+		box-shadow: none !important;
 }
 
 .profile-headerIcon, .profile-headerIcon svg {
@@ -28,11 +30,13 @@
 .profile-body { 
 	background-color: $color3 !important;
 	color: $color2 !important;
+	box-shadow: none !important;
 }
 
 .profile-navigation {
 	color: $color2 !important;
 	background-color: #F1F0F2 !important;
+	box-shadow: none !important;
 }
 
 .profile-tile {
@@ -53,6 +57,10 @@ div:hover > .profile-tile .profile-tileBody {
 
 .profile-tileFooter {
 	background-color: transparent !important;
+}
+
+.profile-subheader {
+	box-shadow: none !important;
 }
 
 .profile-subheaderLabel {
@@ -138,4 +146,12 @@ div:hover > .profile-tile .profile-tileBody {
 	p {
 		display: none
 	}
+}
+
+
+h1, h3, label.buttonLabel, label {
+	color: $color1 !important; 
+}
+h2.sectionhead span {
+	background-color: $color1 !important; 
 }
