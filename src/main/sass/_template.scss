@@ -148,10 +148,62 @@ div:hover > .profile-tile .profile-tileBody {
 	}
 }
 
+#mainPanel {
 
-h1, h3, label.buttonLabel, label {
-	color: $color1 !important; 
+.options .option label {
+	color: white;
+	background-color: $color4;
+}
+
+h1, h3, label.buttonLabel, label, table thead tr th, p {
+	color: $color1; 
 }
 h2.sectionhead span {
 	background-color: $color1 !important; 
+}
+
+input[type="text"], input[type="password"], select, .options .option label, table.dwo tbody {
+	border: 2px $color1 solid;
+}
+
+
+
+input[type="submit"], input[type="button"], button, .pseudobutton, label.pseudobutton,
+	.options .option input:checked ~ label
+ {
+	border: 2px $color1 solid;
+	background-color: $color1;
+	color: white;
+}
+
+h2.helpheader {
+	color: $color1;
+	background-color: $color4;
+}
+
+h1.sectionhead, .subpanel header {
+	border-bottom: 1px $color1 solid;
+}
+
+#welcomeDisplayPanel {
+	background-color: $color3;
+	a {
+		color: $color1;
+	}
+}
+
+table.dwo.sortable {
+	tbody {
+		border-top: none;
+	}
+	thead {
+	border-left: 2px $color1 solid;
+	border-right: 2px $color1 solid;
+	border-top: 2px $color1 solid;
+
+	tr.sorting {
+		background-color: $color4;
+	}
+}
+}
 }
