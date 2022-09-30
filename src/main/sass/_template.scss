@@ -166,7 +166,15 @@ input[type="text"], input[type="password"], select, .options .option label, tabl
 	border: 2px $color1 solid;
 }
 
+.checkbox input:checked ~ label.icon {
+  background-color: #6D4A8A;
+  border: 2px #6D4A8A solid;
+}
 
+input[type="submit"].danger, input[type="button"].danger, button.danger, .pseudobutton.danger, label.pseudobutton.danger {
+  background-color: red;
+  border-color: red;
+}
 
 input[type="submit"], input[type="button"], button, .pseudobutton, label.pseudobutton,
 	.options .option input:checked ~ label
@@ -176,20 +184,41 @@ input[type="submit"], input[type="button"], button, .pseudobutton, label.pseudob
 	color: white;
 }
 
+
 h2.helpheader {
 	color: $color1;
 	background-color: $color4;
 }
 
-h1.sectionhead, .subpanel header {
+.subpanel header section#help.active h2.helpheader {
+  background-color: #D2CAD8;
+  border-left-color: #6D4A8A;
+}
+.subpanel header section#help.active .content {
+  border-left-color: #6D4A8A;
+}
+.subpanel header section#help .content {
+  background-color: #F6DEE4;
+}
+
+
+h1.sectionhead, .subpanel header, .subpanel header section#help h2.helpheader {
 	border-bottom: 1px $color1 solid;
 }
+
 
 #welcomeDisplayPanel {
 	background-color: $color3;
 	a {
 		color: $color1;
 	}
+}
+
+table.dwo thead tr th .sortButton .icon use {
+  fill: #D2CAD8;
+}
+table.dwo thead tr th .sortButton.active .icon use {
+  fill: #6D4A8A;
 }
 
 table.dwo.sortable {
@@ -202,7 +231,7 @@ table.dwo.sortable {
 	border-top: 2px $color1 solid;
 
 	tr.sorting {
-		background-color: $color4;
+		background-color: #F6DEE4;
 	}
 }
 }
