@@ -6,6 +6,8 @@ $color1 : #6D4A8A;
 $color2 : #3D3661;
 $color3 : #FAF8FC;
 $color4 : #D2CAD8;
+$color5 : #F6DEE4;
+$color6 : #F1F0F2;
 
 $toets  : url('toets-inf.svg');
 $lesstof: url('lesstof-inf.svg');
@@ -15,3 +17,43 @@ $folder: url('folder-inf.svg');
 $sco:    url('activiteit-inf.svg');
 
 @import "_template.scss";
+
+#modulesDisplayPanel {
+	position: absolute;
+	right: 54px;
+	width: unset;
+	left: 54px;
+}
+
+#mainPanel nav {
+	top: 50px;
+	ul {
+		margin-left: 14px;
+	}
+}
+
+#mainPanel.expandedNav nav ul {
+	margin-top: 18px;
+}
+
+
+.subpanel header {
+	left: 54px;
+	div.content {
+		margin-left: 18px;
+	}
+}
+
+
+@media only screen and (min-width: 1366px) {
+	#modulesDisplayPanel {
+		left: 212px;
+		right:212px;
+	}
+	.subpanel header {
+		left: 212px;
+	}
+	#mainPanel nav ul {
+		margin-top: 18px;
+	}
+}

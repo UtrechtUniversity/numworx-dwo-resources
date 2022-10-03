@@ -5,8 +5,8 @@
 }
 
 .profile-headerIcon, .profile-headerIcon svg {
-	color: #F6DEE4 !important;
-	fill:  #F6DEE4 !important;
+	color: $color5 !important;
+	fill:  $color5 !important;
 }
 
 .profile-headerLabel, .profile-headerLabel > span, .profile-headerLabel >  a {
@@ -35,7 +35,7 @@
 
 .profile-navigation {
 	color: $color2 !important;
-	background-color: #F1F0F2 !important;
+	background-color: $color6 !important;
 	box-shadow: none !important;
 }
 
@@ -167,8 +167,8 @@ input[type="text"], input[type="password"], select, .options .option label, tabl
 }
 
 .checkbox input:checked ~ label.icon {
-  background-color: #6D4A8A;
-  border: 2px #6D4A8A solid;
+  background-color: $color1;
+  border: 2px $color1 solid;
 }
 
 input[type="submit"].danger, input[type="button"].danger, button.danger, .pseudobutton.danger, label.pseudobutton.danger {
@@ -184,21 +184,23 @@ input[type="submit"], input[type="button"], button, .pseudobutton, label.pseudob
 	color: white;
 }
 
-
+nav {
+	background-color: #dde0e3;
+}
 h2.helpheader {
 	color: $color1;
 	background-color: $color4;
 }
 
 .subpanel header section#help.active h2.helpheader {
-  background-color: #D2CAD8;
-  border-left-color: #6D4A8A;
+  background-color: $color4;
+  border-left-color: $color1;
 }
 .subpanel header section#help.active .content {
-  border-left-color: #6D4A8A;
+  border-left-color: $color1;
 }
 .subpanel header section#help .content {
-  background-color: #F6DEE4;
+  background-color: $color5;
 }
 
 
@@ -215,10 +217,10 @@ h1.sectionhead, .subpanel header, .subpanel header section#help h2.helpheader {
 }
 
 table.dwo thead tr th .sortButton .icon use {
-  fill: #D2CAD8;
+  fill: $color4;
 }
 table.dwo thead tr th .sortButton.active .icon use {
-  fill: #6D4A8A;
+  fill: $color1;
 }
 
 table.dwo.sortable {
@@ -231,7 +233,7 @@ table.dwo.sortable {
 	border-top: 2px $color1 solid;
 
 	tr.sorting {
-		background-color: #F6DEE4;
+		background-color: $color5;
 	}
 }
 }
