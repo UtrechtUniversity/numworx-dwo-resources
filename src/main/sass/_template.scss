@@ -185,7 +185,24 @@ input[type="submit"], input[type="button"], button, .pseudobutton, label.pseudob
 }
 
 nav {
-	background-color: #dde0e3;
+	background-color: $color7;
+	ul.WELCOME 		 li a[href="#WELCOME"], 
+	ul.RESULTS 		 li a[href="#RESULTS"], 
+	ul.KNOWLEDGE 	 li a[href="#KNOWLEDGE"],
+	ul.PERSONS 		 li a[href="#PERSONS"], 
+	ul.SCHOOLCLASSES li a[href="#SCHOOLCLASSES"], 
+	ul.MODULES 		 li a[href="#MODULES"], 
+	ul.ORGANISATION  li a[href="#ORGANISATION"], 
+	ul.CHATBOX 		 li a[href="#CHATBOX"]
+	 {
+    	color: $color1 !important;
+		svg use { 
+			fill: $color1 !important;
+		}
+	}
+	ul.WELCOME li a[href="#WELCOME"] span.icon {
+		background-color: $color1;
+	}
 }
 h2.helpheader {
 	color: $color1;
@@ -217,7 +234,7 @@ h1.sectionhead, .subpanel header, .subpanel header section#help h2.helpheader {
 }
 
 table.dwo thead tr th .sortButton .icon use {
-  fill: $color4;
+  fill: $color5;
 }
 table.dwo thead tr th .sortButton.active .icon use {
   fill: $color1;
@@ -233,7 +250,7 @@ table.dwo.sortable {
 	border-top: 2px $color1 solid;
 
 	tr.sorting {
-		background-color: $color5;
+		background-color: $color4;
 	}
 }
 }
