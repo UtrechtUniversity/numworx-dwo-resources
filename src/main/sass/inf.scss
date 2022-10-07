@@ -27,14 +27,19 @@ $sco:    url('activiteit-inf.svg');
 	left: 54px;
 }
 
-#mainPanel nav {
+#mainPanel {
+  nav {
 	top: 50px;
 	ul {
 		margin-left: 14px;
 		li.profile-welcome {
 			display: list-item;
 		}
-	}
+  	}
+  }
+  .subpanel header .pageIcon {
+	display: none;
+  }
 }
 
 #mainPanel.expandedNav nav ul {
