@@ -255,3 +255,15 @@ table.dwo.sortable {
 }
 }
 }
+
+/* chatbox */
+.profile-borderBox, table.dwo tbody {
+	border-color: $color1 !important;
+}
+
+i.send.fa {
+	background-color: $color1;	
+}
+table.dwo thead th, span.klasnaam, .eastheader, div.header.gwt-Label {
+	color: $color1 !important;
+}
