@@ -257,6 +257,11 @@ table.dwo.sortable {
 }
 
 /* chatbox */
+#eastheader .checkbox span input:checked ~ label {
+	background-color: $color1;		
+	border-color: $color1;
+}
+
 .profile-borderBox, table.dwo tbody {
 	border-color: $color1 !important;
 }
