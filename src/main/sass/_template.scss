@@ -203,6 +203,19 @@ nav {
 	ul.WELCOME li a[href="#WELCOME"] span.icon {
 		background-color: $color1;
 	}
+	
+	ul li a:hover {
+		color: $color1;
+		svg.icon use {
+			fill: $color1;
+		}
+		&[href='#WELCOME'] {
+			span.icon {
+				color: white;
+				background-color: $color1;
+			}
+		}
+	}
 }
 h2.helpheader {
 	color: $color1;
@@ -225,6 +238,12 @@ h1.sectionhead, .subpanel header, .subpanel header section#help h2.helpheader {
 	border-bottom: 1px $color1 solid;
 }
 
+header #accountMenuBox {
+	background-color: $color1;
+	#accountMenuSchoolName, #accountMenuUserRole, #accountMenuPresentationName {
+		color: $color4;
+	}
+}
 
 #welcomeDisplayPanel {
 	background-color: $color3;
