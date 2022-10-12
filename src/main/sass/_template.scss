@@ -285,9 +285,13 @@ table.dwo.sortable {
 	border-color: $color1 !important;
 }
 
-i.send.fa {
+i.send.fa, div.filter-title {
 	background-color: $color1;	
 }
-table.dwo thead th, span.klasnaam, .eastheader, div.header.gwt-Label {
+table.dwo thead th, span.klasnaam, .eastheader, div.header.gwt-Label, .description-title, .lightbox header, a.backlink, h2#selectedResultsTitle {
 	color: $color1 !important;
 }
+
+a.backlink svg.icon use {
+	fill: $color1 !important;
+} 
