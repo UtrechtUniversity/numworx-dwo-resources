@@ -284,17 +284,64 @@ table.dwo.sortable, table.dwo.results {
 			background-color: $color4;	
 		}
 	}
+	
 }
 }
 
 
-table.dwo.results.alternativeHeader thead {
-	tr.sorting, tr.headers {
-		background-color: white;
-		th:first-child {
-			background-color: white;	
+table.dwo.results{
+	thead {
+		tr:nth-child(1) {				
+			th, th:first-child {
+				background-color: $color1;
+				color: white !important;
+			}
+		}
+		tr:nth-child(2) th span {
+			color: $color2;
+			background-color: $color4;
+			border-color: $color5;
+			&.active a {
+				color: $color1;
+				&:after {
+					background: transparent none;
+					content: "▸";
+					font-size: 150%;
+				}
+			
+			}
+			
 		}
 	}
+	&.alternativeHeader thead {
+		tr:nth-child(2) th span {
+			color: $color1;
+			background-color: white;
+		}
+		tr.sorting, tr.headers {
+			background-color: white;
+			th:first-child {
+				background-color: white;	
+			}
+		}
+	}
+}
+
+.lightbox a {
+	color: $color1;
+	.icon use {
+		fill: $color1;
+	}	
+}
+.lightbox a:hover {
+	color: $color2;
+	.icon use {
+		fill: $color2;
+	}	
+}
+
+.filterIndicators.active {
+	border-bottom-color: $color1;
 }
 
 }
@@ -315,6 +362,8 @@ table.dwo thead th, span.klasnaam, .eastheader, div.header.gwt-Label, .descripti
 	color: $color1 !important;
 }
 
-a.backlink svg.icon use {
-	fill: $color1 !important;
-} 
+a.backlink svg.icon, #selectedResultsDisplay svg.icon.btn { 
+	use {
+		fill: $color1 !important;
+	}
+}
