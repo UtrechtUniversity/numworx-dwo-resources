@@ -158,8 +158,18 @@ div:hover > .profile-tile .profile-tileBody {
 h1, h3, label.buttonLabel, label, table thead tr th, p {
 	color: $color1; 
 }
-h2.sectionhead span {
+h2.sectionhead span  {
 	background-color: $color1 !important; 
+}
+
+section.dialog {
+	background-color: $color3;
+	h4 {
+		background-color: $color1; 
+	}
+    &.alert h4 {
+		background-color: red;
+	}
 }
 
 input[type="text"], input[type="password"], select, .options .option label, table.dwo tbody {
@@ -259,7 +269,7 @@ table.dwo thead tr th .sortButton.active .icon use {
   fill: $color1;
 }
 
-table.dwo.sortable {
+table.dwo.sortable, table.dwo.results {
 	tbody {
 		border-top: none;
 	}
@@ -268,13 +278,26 @@ table.dwo.sortable {
 	border-right: 2px $color1 solid;
 	border-top: 2px $color1 solid;
 
-	tr.sorting {
+	tr.sorting, tr.headers {
 		background-color: $color4;
+		th:first-child {
+			background-color: $color4;	
+		}
 	}
 }
 }
+
+
+table.dwo.results.alternativeHeader thead {
+	tr.sorting, tr.headers {
+		background-color: white;
+		th:first-child {
+			background-color: white;	
+		}
+	}
 }
 
+}
 /* chatbox */
 #eastheader .checkbox span input:checked ~ label {
 	background-color: $color1;		
