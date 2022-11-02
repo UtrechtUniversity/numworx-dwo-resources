@@ -367,3 +367,32 @@ a.backlink svg.icon, #selectedResultsDisplay svg.icon.btn {
 		fill: $color1 !important;
 	}
 }
+
+/* navigatiebalk */
+
+.navigatiebalk {
+	.myPushButton, .scoreBtn .nr {
+		background-color: $color4;
+	}
+	.myPushButton-disabled {
+		background-color: #d2d2d2;
+	}
+	.scoreBtn.scoreBtn-cursor .nr {
+		background-color: $color1;
+	}
+	.scoreBtn.scoreBtn-max0 .nr {
+		background-color: #c0c0c0;
+	}
+	.shiftBtn, .spaceShiftLabel {
+		color: $color4;
+		border-color: $color4;
+	}
+	.score, .navigatiebalkLabel {
+		color: $color1;
+	}
+	.spaceLabel {
+		background-image: linear-gradient(180deg, 
+ 		#ffffff, #ffffff 16px, $color4 16px, $color4 18px, #ffffff 18px, #ffffff 34px); 
+
+	}
+}
