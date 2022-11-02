@@ -377,11 +377,11 @@ a.backlink svg.icon, #selectedResultsDisplay svg.icon.btn {
 	.myPushButton-disabled {
 		background-color: #d2d2d2;
 	}
-	.scoreBtn.scoreBtn-cursor .nr {
-		background-color: $color1;
-	}
 	.scoreBtn.scoreBtn-max0 .nr {
 		background-color: #c0c0c0;
+	}
+	.scoreBtn.scoreBtn-cursor .nr {
+		background-color: $color1;
 	}
 	.shiftBtn, .spaceShiftLabel {
 		color: $color4;
