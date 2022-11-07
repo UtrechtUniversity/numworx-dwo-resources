@@ -148,6 +148,24 @@ div:hover > .profile-tile .profile-tileBody {
 	}
 }
 
+.profile-popup {
+	border-color: $color1 !important;
+	box-shadow: none !important;
+	
+	.profile-infopanel {
+		color: $color1;
+		background-color: $color6;
+
+		.profile-infopanel-west {
+			background-image: $info;
+		}
+	}
+}
+
+.profile-tileInfo {
+	background-image: $info !important;
+}
+
 #mainPanel {
 
 .options .option label {
