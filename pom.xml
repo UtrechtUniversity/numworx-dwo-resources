@@ -85,7 +85,7 @@
     		<id>test</id>
     		<properties>
     			<s3>s3://test-dwo-nl</s3>
-    			<s3id>ubuntu</s3id> 		
+    			<s3id>prod</s3id> 		
     		</properties>
     		<build>
     			<plugins>
