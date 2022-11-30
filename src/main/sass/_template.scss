@@ -390,6 +390,15 @@ a.backlink svg.icon, #selectedResultsDisplay svg.icon.btn {
 	background-color: $color5 !important;
 }
 
+
+div.date-Label {
+    background-image: linear-gradient(180deg, transparent, transparent 16px, $color1 16px, $color1 18px, transparent 18px, transparent 34px);
+
+	div.gwt-Label {
+		color: $color1;
+	}
+}
+
 /* navigatiebalk */
 
 .navigatiebalk {
