@@ -9,8 +9,16 @@
 	fill:  $color5 !important;
 }
 
-.profile-headerLabel, .profile-headerLabel > span, .profile-headerLabel >  a {
-	color: $color3 !important;
+.profile-headerLabel, .profile-headerLabel > span {
+	color: $color4 !important;
+}
+
+.profile-headerLabel#headertrails {
+	font-size: 15px;
+	color: $color3 !important; 
+	a {
+		color: $color3;
+	}
 }
 
 .profile-headerLogo {
