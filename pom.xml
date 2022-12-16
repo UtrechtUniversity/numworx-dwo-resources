@@ -12,7 +12,7 @@
     <description>profile-styles war</description>
 
     <properties>
-        <maven-war-plugin.version>2.1.1</maven-war-plugin.version>
+        <maven-war-plugin.version>3.2.3</maven-war-plugin.version>
 		<wagonPhase>verify</wagonPhase>
 		<s3>s3://ebs-dev-dwo-nl</s3>
 		<s3id>dev</s3id>
