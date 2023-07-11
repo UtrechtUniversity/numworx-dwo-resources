@@ -31,6 +31,10 @@
 	background-color: $color3 !important;
 	color: $color2 !important;
 	box-shadow: none !important;
+	
+	contentPanel {
+		background-color: $color7 !important;
+	}
 }
 
 .profile-navigation {
