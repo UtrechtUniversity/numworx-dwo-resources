@@ -29,7 +29,7 @@
 }
 .profile-headerLogo::before {
 	color: $color4;
-	content: 'Co-Teach Informatica';
+	content: $headerTitle; /* Wiskunde online */
 	font-size: 18px;
 	display: inline-block;
 	width: 100px;
@@ -145,7 +145,7 @@ div:hover > .profile-tile .profile-tileBody {
 
 .profile-loginTitle {
 	&::before {
-		content: "Co-Teach Informatica";
+		content: $headerTitle;
 		width: 800px;
 		color: $color1;
 		overflow: visible;
