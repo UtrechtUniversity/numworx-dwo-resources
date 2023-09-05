@@ -40,8 +40,8 @@
 	color: $color2 !important;
 	box-shadow: none !important;
 	
-	contentPanel {
-		background-color: $color7 !important;
+	.contentScrollPanel {
+		background-color: white !important;
 	}
 }
 

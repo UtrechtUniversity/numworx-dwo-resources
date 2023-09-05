@@ -13,7 +13,7 @@
 
     <properties>
         <maven-war-plugin.version>3.2.3</maven-war-plugin.version>
-		<wagonPhase>verify</wagonPhase>
+		<wagonPhase>none</wagonPhase>
 		<s3>s3://ebs-dev-dwo-nl</s3>
 		<s3id>dev</s3id>
 		<remote>scp://gemini.science.uu.nl</remote>
@@ -86,6 +86,7 @@
     		<properties>
     			<s3>s3://test-dwo-nl</s3>
     			<s3id>prod</s3id> 		
+ 				<wagonPhase>verify</wagonPhase>
     		</properties>
     		<build>
     			<plugins>
