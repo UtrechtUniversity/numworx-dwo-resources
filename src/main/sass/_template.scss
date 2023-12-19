@@ -414,7 +414,10 @@ div.date-Label {
 /* navigatiebalk */
 
 .navigatiebalk {
-	.myPushButton, .scoreBtn .nr {
+	.myPushButton {
+		background-color: $color1;
+	}	
+	.scoreBtn .nr {
 		background-color: $color4;
 	}
 	.myPushButton-disabled {
