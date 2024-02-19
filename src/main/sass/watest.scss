@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/*
+ * numworx.css
+ */
+$headerTitle: 'Wiskunde Actief';
+
+$color1 : #056C89;
+$color2 : #023653;
+$color3 : #FFFFFF;
+$color4 : #88B4B1;
+$color5 : #C3E4E9;
+$color6 : #FFFFFF;
+$color7 : $color4;
+$content: $color6;
+
+$toets  : url('toets-inf.svg');
+$lesstof: url('lesstof-inf.svg');
+
+$module: url('module-inf.svg');
+$folder: url('folder-inf.svg');
+$sco:    url('activiteit-inf.svg');
+$info:   url('info-inf.svg');
+
+@import "_template.scss";
+
+
+#modulesDisplayPanel {
+	position: absolute;
+	right: 54px;
+	width: unset;
+	left: 54px;
+}
+
+main#mainPanel {
+  background-color: white;
+  nav {
+	top: 50px;
+	ul {
+		margin-left: 14px;
+		li.profile-welcome {
+			display: list-item;
+		}
+  	}
+  }
+  .subpanel header .pageIcon {
+	display: none;
+  }
+}
+
+#mainPanel.expandedNav nav ul {
+	margin-top: 18px;
+}
+
+
+.subpanel header {
+	left: 54px;
+	div.content {
+		margin-left: 18px;
+	}
+}
+
+
+@media only screen and (min-width: 1366px) {
+	#modulesDisplayPanel {
+		left: 212px;
+		right:212px;
+	}
+	.subpanel header {
+		left: 212px;
+	}
+	#mainPanel nav ul {
+		margin-top: 18px;
+	}
+}
+
+html {
+	font-family: "Montserrat", sans-serif !important;
+}

@@ -5,7 +5,7 @@
 
     <groupId>nl.uu.fi.dwo.lms</groupId>
     <artifactId>profile-styles</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>2.5.29-SNAPSHOT</version>
     <packaging>war</packaging>
 
     <name>profile-styles</name>
@@ -14,7 +14,7 @@
     <properties>
         <maven-war-plugin.version>3.2.3</maven-war-plugin.version>
 		<wagonPhase>none</wagonPhase>
-		<s3>s3://ebs-dev-dwo-nl</s3>
+		<s3>file://${env.HOME}/Public</s3>
 		<s3id>dev</s3id>
 		<remote>scp://gemini.science.uu.nl</remote>
 		<remoteDir>/science/wwwprojects/FI-Sites/www-dev/dwo/apps/css</remoteDir>
