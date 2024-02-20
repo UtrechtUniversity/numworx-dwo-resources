@@ -11,7 +11,7 @@ $color3 : #FFFFFF;
 $color4 : #88B4B1;
 $color5 : #C3E4E9;
 $color6 : #FFFFFF;
-$color7 : $color4;
+$color7 : #78AAB4;
 $content: $color6;
 $loginbackground: #023653B3;
 $headerbackground: $color1;
@@ -30,6 +30,22 @@ $info:   url('info-inf.svg');
 @import "_template.scss";
 
 
+.profile-headerLogo::before {
+	content: '';
+	background-image: url('wiskunde-actief-logo.png');
+	background-size: 150px 45px;
+	background-repeat: no-repeat;
+	height: 45px;
+	width: 180px;
+}
+.profile-loginTitle::before {
+	content: '';
+	background-image: url('wiskunde-actief-logo.png');
+	background-size: 300px 100px;
+	background-repeat: no-repeat;
+	height: 100px;
+	
+}
 #modulesDisplayPanel {
 	position: absolute;
 	right: 54px;
@@ -40,28 +56,46 @@ $info:   url('info-inf.svg');
 main#mainPanel.expandedNav nav {
   background-color: $color7;
   box-shadow: none;
+  top: 72px;
 }
 
 main#mainPanel {
   background-color: white;
   > header {
-	background-image: linear-gradient($color1, $color7);	
+	background-image: linear-gradient(#36859A, $color7);
+	height: 62px;
+	padding-top: 10px;
+	#mainrole {
+		vertical-align: 20px;
+	}
   }
   nav {
-	top: 50px;
+	top: 72px;
 	ul {
 		margin-left: 14px;
 		li.profile-welcome {
 			display: list-item;
 			
 		}
-		a {
+		li a {
 		color: white;
+		.icon {
+			background-color: white;
+			use {
+				fill: $color1;
+			}
+		}
 		}
   	}
   }
-  .subpanel header .pageIcon {
-	display: none;
+  .subpanel header {
+	top: 72px;
+	.pageIcon {
+		display: none;
+  	}
+  }
+  .subpanel.iframepanel {
+	padding-top: 72px;
   }
 }
 
@@ -109,7 +143,8 @@ html {
 	font-family: 'Montserrat';
 }
 
-#loginBox {
+div#loginBox {
+	left: 0px !important;
 	.profile-loginPanel {
     	background-color: transparent;
 		color: white;

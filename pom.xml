@@ -70,7 +70,7 @@
 				</executions>
 				<configuration>
 					<fromDir>${project.build.directory}/${project.build.finalName}/css</fromDir>
-					<includes>*.css,*.svg</includes>
+					<includes>*.css,*.svg,*.png</includes>
 					<serverId>${s3id}</serverId>
 					<url>${s3}</url>
 					<toDir>apps/css</toDir>
