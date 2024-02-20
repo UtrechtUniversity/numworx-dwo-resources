@@ -1,5 +1,5 @@
 .profile-header {
-        background-color: $color1 !important;
+        background-color: $headerbackground !important;
 		-webkit-box-shadow: none !important;
 		box-shadow: none !important;
 }
@@ -10,7 +10,7 @@
 }
 
 .profile-headerLabel, .profile-headerLabel > span {
-	color: $color4 !important;
+	color: $headercolor !important;
 }
 
 .profile-headerLabel#headertrails {
@@ -28,7 +28,7 @@
 	}
 }
 .profile-headerLogo::before {
-	color: $color4;
+	color: $headercolor;
 	content: $headerTitle; /* Wiskunde online */
 	font-size: 18px;
 	display: inline-block;
@@ -52,10 +52,10 @@
 }
 
 .profile-tile {
-	border-bottom-color: $color4 !important;
+	border-bottom-color: $headercolor !important;
 }
 .profile-tileHeader {
-	background-color: $color4 !important;
+	background-color: $headercolor !important;
 }
 .profile-tileBody {
 	background-color: white !important;
@@ -185,9 +185,13 @@ div:hover > .profile-tile .profile-tileBody {
 	background-color: $color4;
 }
 
-h1, h3, label.buttonLabel, label, table thead tr th, p, div.gwt-Label {
+h1, h3, label.buttonLabel, label, table thead tr th {
 	color: $color1; 
 }
+p, div.gwt-Label {
+	color: $textcolor; 
+}
+
 h2.sectionhead span  {
 	background-color: $color1 !important; 
 }
@@ -288,7 +292,7 @@ header #accountMenuBox {
 #welcomeDisplayPanel {
 	background-color: $color3;
 	a {
-		color: $color1;
+		color: $textcolor;
 	}
 }
 

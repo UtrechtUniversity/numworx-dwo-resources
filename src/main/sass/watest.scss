@@ -14,6 +14,10 @@ $color6 : #FFFFFF;
 $color7 : $color4;
 $content: $color6;
 $loginbackground: #023653B3;
+$headerbackground: $color1;
+$textcolor: black;
+$headercolor: white;
+
 
 $toets  : url('toets-inf.svg');
 $lesstof: url('lesstof-inf.svg');
@@ -33,14 +37,26 @@ $info:   url('info-inf.svg');
 	left: 54px;
 }
 
+main#mainPanel.expandedNav nav {
+  background-color: $color7;
+  box-shadow: none;
+}
+
 main#mainPanel {
   background-color: white;
+  > header {
+	background-image: linear-gradient($color1, $color7);	
+  }
   nav {
 	top: 50px;
 	ul {
 		margin-left: 14px;
 		li.profile-welcome {
 			display: list-item;
+			
+		}
+		a {
+		color: white;
 		}
   	}
   }
@@ -104,5 +120,12 @@ html {
 		a {
 			color: white;
 		}
+	}
+}
+
+
+#mainPanel {
+	p, div.gwt-Label {
+		font-family: 'Poppins'; 
 	}
 }
