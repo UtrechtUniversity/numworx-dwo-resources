@@ -53,6 +53,12 @@ $info:   url('info-inf.svg');
 	left: 54px;
 }
 
+section.profile-login {
+	background-color: $loginbackground;
+	background-image: linear-gradient($loginbackground,$loginbackground), url('leerlingen.jpg');
+	background-size: cover;
+}
+
 main#mainPanel.expandedNav nav {
   background-color: $color7;
   box-shadow: none;
@@ -84,7 +90,17 @@ main#mainPanel {
 			use {
 				fill: $color1;
 			}
+		 	.fa-inverse {
+    			color: white;
+    			background-color: $color1;
+			}
 		}
+		span.icon {
+			background-color: $color1;
+		}
+		
+		
+		
 		}
   	}
   }
@@ -96,6 +112,10 @@ main#mainPanel {
   }
   .subpanel.iframepanel {
 	padding-top: 72px;
+  }
+ 
+  table.dwo.results thead tr:nth-child(1) th:first-child:before {
+	background-color: white;
   }
 }
 
@@ -120,8 +140,11 @@ main#mainPanel {
 	.subpanel header {
 		left: 212px;
 	}
-	#mainPanel nav ul {
-		margin-top: 18px;
+	main#mainPanel nav {
+	  box-shadow: none;
+	  ul {
+			margin-top: 18px;
+	  }
 	}
 }
 
@@ -164,3 +187,5 @@ div#loginBox {
 		font-family: 'Poppins'; 
 	}
 }
+
+
