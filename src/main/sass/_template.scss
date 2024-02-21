@@ -239,24 +239,24 @@ nav {
 	ul.ORGANISATION  li a[href="#ORGANISATION"], 
 	ul.CHATBOX 		 li a[href="#CHATBOX"]
 	 {
-    	color: $color1 !important;
+    	color: $selectcolor !important;
 		svg use { 
-			fill: $color1 !important;
+			fill: $selectcolor !important;
 		}
 	}
 	ul.WELCOME li a[href="#WELCOME"] span.icon {
-		background-color: $color1;
+		background-color: $selectcolor;
 	}
 	
 	ul li a:hover {
-		color: $color1;
+		color: $selectcolor;
 		svg.icon use {
-			fill: $color1;
+			fill: $selectcolor;
 		}
 		&[href='#WELCOME'] {
 			span.icon {
 				color: white;
-				background-color: $color1;
+				background-color: $selectcolor;
 			}
 		}
 	}

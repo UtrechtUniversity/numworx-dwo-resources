@@ -12,11 +12,12 @@ $color4 : #88B4B1;
 $color5 : #C3E4E9;
 $color6 : #FFFFFF;
 $color7 : #78AAB4;
-$content: $color6;
+$content: $color7;
 $loginbackground: #023653B3;
 $headerbackground: $color1;
 $textcolor: black;
 $headercolor: white;
+$selectcolor: $color2;
 
 
 $toets  : url('toets-inf.svg');
@@ -188,4 +189,7 @@ div#loginBox {
 	}
 }
 
-
+body input[type="submit"], input[type="button"], button, .pseudobutton, label.pseudobutton
+{
+	border-radius: 15px;
+}
