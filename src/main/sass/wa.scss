@@ -49,9 +49,9 @@ $info:   url('info-inf.svg');
 }
 #modulesDisplayPanel {
 	position: absolute;
-	right: 54px;
+//	right: 54px;
 	width: unset;
-	left: 54px;
+//	left: 54px;
 }
 
 section.profile-login {
@@ -148,6 +148,34 @@ main#mainPanel {
 	  }
 	}
 }
+
+@media only screen and (max-width: 1650px) {
+	main#mainPanel {
+	&.expandedNav .subpanel {
+		margin-right: -212px;
+		header {
+			left: 212px;
+		}
+	}
+	nav {
+		width: 54px;
+		ul li a .name {
+    		display: none;
+    		line-height: 26px;
+		}
+	}
+	
+	.subpanel {
+		margin-right: -54px;	
+		header {
+			left: 54px;
+		}
+	}
+	#modulesDisplayPanel {
+		left: 54px;
+		right: 54px;
+	}
+}}
 
 html {
 	font-family: "Montserrat", sans-serif !important;
