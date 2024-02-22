@@ -17,6 +17,7 @@ $loginbackground: #023653B3;
 $headerbackground: $color1;
 $textcolor: black;
 $headercolor: white;
+$tileheaderbackground: $color4;
 $selectcolor: $color2;
 $navigationcolor: white;
 
@@ -24,10 +25,10 @@ $navigationcolor: white;
 $toets  : url('toets-inf.svg');
 $lesstof: url('lesstof-inf.svg');
 
-$module: url('module-inf.svg');
-$folder: url('folder-inf.svg');
-$sco:    url('activiteit-inf.svg');
-$info:   url('info-inf.svg');
+$module: url('module-wa.svg');
+$folder: url('folder-wa.svg');
+$sco:    url('activiteit-wa.svg');
+$info:   url('info-wa.svg');
 
 @import "_template.scss";
 
@@ -247,3 +248,14 @@ body input[type="submit"], input[type="button"], button, .pseudobutton, label.ps
 	display: inline-block;
 }
 
+.gwt-Tree .gwt-TreeItem-selected {
+	background: $color5 !important;
+	color: $color2;
+}
+
+.navCellList.cellListWidget .cellListSelectedItem,
+.navCellList.cellListWidget  .cellListEvenItem:hover, 
+.navCellList.cellListWidget  .cellListOddItem:hover {
+	background: $color5 !important;
+	color: $color2 !important;
+}

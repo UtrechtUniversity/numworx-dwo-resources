@@ -52,10 +52,10 @@
 }
 
 .profile-tile {
-	border-bottom-color: $headercolor !important;
+	border-bottom-color: $tileheaderbackground !important;
 }
 .profile-tileHeader {
-	background-color: $headercolor !important;
+	background-color: $tileheaderbackground !important;
 }
 .profile-tileBody {
 	background-color: white !important;
