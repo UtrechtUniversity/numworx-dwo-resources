@@ -56,6 +56,11 @@ $info:   url('info-wa.svg');
 //	left: 54px;
 }
 
+.modernstyle #modulesDisplayPanel {
+	top: 0px;
+	bottom: 0px;
+}
+
 section.profile-login {
 	background-color: $loginbackground;
 	background-image: linear-gradient(#02365300,$loginbackground), url('leerlingen.jpg');
