@@ -56,6 +56,10 @@ $info:   url('info-wa.svg');
 //	left: 54px;
 }
 
+body.ANONYMOUS section#modulesDisplayPanel {
+	left: 0px !important;
+}
+
 .modernstyle #modulesDisplayPanel {
 	top: 0px;
 	bottom: 0px;
