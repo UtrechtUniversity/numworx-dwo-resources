@@ -143,6 +143,11 @@ div:hover > .profile-tile .profile-tileBody {
 	display: none;
 }
 
+.modernstyle .profile-loginLogo {
+	display:block;
+	visibility: hidden;
+}
+
 .profile-loginTitle {
 	&::before {
 		content: $headerTitle;
