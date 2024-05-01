@@ -183,6 +183,15 @@ div:hover > .profile-tile .profile-tileBody {
 	background-image: $info !important;
 }
 
+.modernstyle {
+	#mainPanel {
+		background-color: $color7;
+		.subpanel {
+			background-color: #eff1f3;
+		}
+	}
+}
+
 #mainPanel {
 
 .options .option label {

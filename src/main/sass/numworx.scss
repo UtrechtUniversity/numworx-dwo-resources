@@ -46,11 +46,12 @@ $info:   url('info-inf.svg');
 	right:0px;
 }
 
-
+body:not(.modernstyle) #mainPanel nav {
+	top: 50px;
+}
 
 #mainPanel {
   nav {
-	top: 50px;
 	ul {
 		margin-left: 14px;
 		li.profile-welcome {
@@ -63,15 +64,16 @@ $info:   url('info-inf.svg');
   }
 }
 
-#mainPanel.expandedNav nav ul {
-	margin-top: 18px;
-}
 
-
-.subpanel header {
-	left: 54px;
-	div.content {
-		margin-left: 18px;
+body:not(.modernstyle) {
+	#mainPanel.expandedNav nav ul {
+		margin-top: 18px;
+	}
+	.subpanel header {
+		left: 54px;
+		div.content {
+			margin-left: 18px;
+		}
 	}
 }
 

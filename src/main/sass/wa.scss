@@ -89,7 +89,7 @@ main#mainPanel {
 	}
   }
   nav {
-	top: 72px;
+	top: 130px;
 	ul {
 		margin-left: 14px;
 		li.profile-welcome {
@@ -132,15 +132,17 @@ main#mainPanel {
   }
 }
 
-#mainPanel.expandedNav nav ul {
-	margin-top: 18px;
-}
 
 
-.subpanel header {
-	left: 54px;
-	div.content {
-		margin-left: 18px;
+body:not(.modernstyle) {
+	#mainPanel.expandedNav nav ul {
+		margin-top: 18px;
+	}
+	.subpanel header {
+		left: 54px;
+		div.content {
+			margin-left: 18px;
+		}
 	}
 }
 
@@ -162,26 +164,42 @@ main#mainPanel {
 }
 
 @media only screen and (max-width: 1650px) {
+	
+	body:not(.modernstyle) {
+		main#mainPanel {
+			&.expandedNav .subpanel {
+			header {
+				left: 212px;
+			}
+		}		
+		nav {
+		width: 54px;
+			ul li a .name {
+    		display: none;
+		}
+
+		}
+		.subpanel {
+		margin-right: -54px;	
+		header {
+			left: 54px;
+		}
+	}
+	
+	}
+	}
 	main#mainPanel {
 	&.expandedNav .subpanel {
 		margin-right: -212px;
-		header {
-			left: 212px;
-		}
 	}
 	nav {
-		width: 54px;
 		ul li a .name {
-    		display: none;
     		line-height: 26px;
 		}
 	}
 	
 	.subpanel {
 		margin-right: -54px;	
-		header {
-			left: 54px;
-		}
 	}
 	#modulesDisplayPanel {
 		left: 54px;

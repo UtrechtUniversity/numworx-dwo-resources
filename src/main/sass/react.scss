@@ -46,9 +46,12 @@ $info:   url('info-inf.svg');
 	right:0px;
 }
 
+body:not(.modernstyle) #mainPanel nav {
+	top: 50px;
+}
+
 #mainPanel {
   nav {
-	top: 50px;
 	ul {
 		margin-left: 14px;
 		li.profile-welcome {
@@ -61,28 +64,31 @@ $info:   url('info-inf.svg');
   }
 }
 
-#mainPanel.expandedNav nav ul {
-	margin-top: 18px;
-}
 
-
-.subpanel header {
-	left: 54px;
-	div.content {
-		margin-left: 18px;
+body:not(.modernstyle) {
+	#mainPanel.expandedNav nav ul {
+		margin-top: 18px;
+	}
+	.subpanel header {
+		left: 54px;
+		div.content {
+			margin-left: 18px;
+		}
 	}
 }
 
-
 @media only screen and (min-width: 1366px) {
+	body:not(.modernstyle) {
+		#mainPanel nav ul {
+			margin-top: 18px;
+		}		
+		.subpanel header {
+			left: 212px;
+		}
+	}
+		
 	#modulesDisplayPanel {
 		left: 212px;
 		right:212px;
-	}
-	.subpanel header {
-		left: 212px;
-	}
-	#mainPanel nav ul {
-		margin-top: 18px;
 	}
 }
