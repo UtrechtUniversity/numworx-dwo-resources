@@ -131,7 +131,9 @@
     	<repository>
     		<url>https://repo1.maven.org/maven2/</url>
     		<id>public</id>
-    		<snapshots>false</snapshots>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
     	</repository>
     </repositories>
 </project>
