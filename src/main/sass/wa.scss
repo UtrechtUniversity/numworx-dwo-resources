@@ -84,6 +84,10 @@ main#mainPanel.expandedNav nav {
   top: 72px;
 }
 
+//.modernstyle main#mainPanel:not(.expandedNav) nav:not(.open) {
+//	top: 130px;
+//}
+
 main#mainPanel {
   background-color: white;
   > header {
@@ -95,7 +99,7 @@ main#mainPanel {
 	}
   }
   nav {
-	top: 130px;
+	top: 72px;
 	ul {
 		margin-left: 14px;
 		li.profile-welcome {
@@ -164,7 +168,7 @@ body:not(.modernstyle) {
 	main#mainPanel nav {
 	  box-shadow: none;
 	  ul {
-			margin-top: 18px;
+//			margin-top: 18px;
 	  }
 	}
 }
