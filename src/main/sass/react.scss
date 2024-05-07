@@ -31,10 +31,12 @@ $info:   url('info-inf.svg');
 @import "_template.scss";
 
 
+body:not(.modernstyle) #modulesDisplayPanel {
+        position: absolute;
+        width: unset;
+}
 #modulesDisplayPanel {
-	position: absolute;
 	right: 54px;
-	width: unset;
 	left: 54px;
 }
 
@@ -42,7 +44,6 @@ $info:   url('info-inf.svg');
 .modernstyle #modulesDisplayPanel {
 	top: 0px;
 	bottom: 0px;
-	margin-left: 0px;
 	right:0px;
 }
 

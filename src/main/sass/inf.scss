@@ -33,16 +33,18 @@ $info:   url('info-inf.svg');
 
 
 #modulesDisplayPanel {
-	position: absolute;
 	right: 54px;
-	width: unset;
 	left: 54px;
+}
+
+body:not(.modernstyle) #modulesDisplayPanel {
+        position: absolute;
+        width: unset;
 }
 
 .modernstyle #modulesDisplayPanel {
 	top: 0px;
 	bottom: 0px;
-	margin-left: 0px;
 	right:0px;
 }
 body:not(.modernstyle) #mainPanel nav {
