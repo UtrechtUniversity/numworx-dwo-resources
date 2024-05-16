@@ -60,9 +60,14 @@ body.ANONYMOUS section#modulesDisplayPanel {
 	left: 0px !important;
 }
 
-.modernstyle #modulesDisplayPanel {
-	top: 0px;
-	bottom: 0px;
+.modernstyle {
+	#modulesDisplayPanel {
+		top: 0px;
+		bottom: 0px;
+	}
+	#welcomeDisplayPanel section {
+		padding-top: 130px;
+	}
 }
 .modernstyle main#mainPanel nav.open {
 	top: 72px;
