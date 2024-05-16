@@ -261,6 +261,10 @@ nav {
 	ul.WELCOME li a[href="#WELCOME"] span.icon {
 		background-color: $selectcolor;
 	}
+
+	ul.KNOWLEDGE li a[href="#KNOWLEDGE"] svg.icon use {
+		fill: $selectcolor !important;
+	}
 	
 	ul li a:hover {
 		color: $selectcolor;
@@ -291,7 +295,7 @@ h2.helpheader {
   background-color: $color5;
 }
 
-
+unset
 h1.sectionhead, .subpanel header, .subpanel header section#help h2.helpheader {
 	border-bottom: 1px $color1 solid;
 }
@@ -459,4 +463,27 @@ div.date-Label {
  		#ffffff, #ffffff 16px, $color4 16px, $color4 18px, #ffffff 18px, #ffffff 34px); 
 
 	}
+}
+
+
+.modernstyle #mainPanel {
+	table.dwo.sortable {
+		thead {
+			tr.sorting th:first-child {
+				background-color: transparent;
+			}
+			tr.sorting::after {
+				background-color: $color4;
+				
+			}
+		}
+		tbody {
+			border-style: none;
+			border-width: 0px;
+		}
+		tbody::before, tbody::after {
+			border-color: $color1;
+		}
+	}
+	
 }
