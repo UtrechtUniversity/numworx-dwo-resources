@@ -186,9 +186,48 @@ div:hover > .profile-tile .profile-tileBody {
 .modernstyle {
 	#mainPanel {
 		background-color: $color7;
-		.subpanel {
+		.subpanel, table.dwo.results thead tr:nth-child(1) th:first-child:before {
 			background-color: #eff1f3;
 		}
+		table.dwo.sortable, table.dwo.results {
+			thead {
+				tr:nth-child(3) th {
+					background-color: $color4;
+				}				 
+				
+			 tr.headers {
+				background-color: transparent;
+				th:first-child {
+					background-color: transparent;	
+				}
+				&::before {
+					background-color: $color4;
+				}
+			}
+			}
+		}
+		table.dwo.results.alternativeHeader thead {
+			tr:nth-child(2) th span {
+				color: $color1;
+				background-color: white;
+			}
+			tr.sorting, tr.headers {
+				background-color: transparent;
+				th:first-child {
+					background-color: transparent;	
+				}
+			}
+			tr.sorting::after, tr.headers::before {
+				background-color: white;
+			}
+
+			tr:nth-child(3) th {
+				background-color: white;
+			}				 
+
+		
+		}
+		
 	}
 }
 
