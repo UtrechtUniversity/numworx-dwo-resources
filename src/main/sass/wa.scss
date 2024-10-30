@@ -89,6 +89,13 @@ main#mainPanel.expandedNav nav {
   top: 72px;
 }
 
+@media (min-width: 1366px) { 
+	body.modernstyle:not(.collapsed) #mainPanel nav {
+    	background-color: $color7;
+    	box-shadow: none;
+	}
+}
+
 //.modernstyle main#mainPanel:not(.expandedNav) nav:not(.open) {
 //	top: 130px;
 //}
