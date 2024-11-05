@@ -11,7 +11,7 @@ $color5 : #F2EFF4;
 $color6 : $color1;
 $color7 : #AD9FB8;
 
-$content: $color7;
+$content: $color3;
 $loginbackground: $color3;
 $headerbackground: $color1;
 $textcolor: $color1;
@@ -23,9 +23,9 @@ $navigationcolor: white;
 $toets  : url('toets-inf.svg');
 $lesstof: url('lesstof-inf.svg');
 
-$module: url('module-inf.svg');
-$folder: url('folder-inf.svg');
-$sco:    url('activiteit-inf.svg');
+$module: url('module-wa.svg');
+$folder: url('folder-wa.svg');
+$sco:    url('activiteit-wa.svg');
 $info:   url('info-inf.svg');
 
 @import "_template.scss";
