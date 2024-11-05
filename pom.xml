@@ -125,7 +125,12 @@
     			</plugins>
     		</build>
     	</profile>
-    
+    	<profile>
+			<id>local</id>
+			<properties>
+				<wagonPhase>install</wagonPhase>
+			</properties>			
+		</profile>
     </profiles>
     <repositories>
     	<repository>
