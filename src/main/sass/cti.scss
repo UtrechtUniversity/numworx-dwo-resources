@@ -1,0 +1,257 @@
+/*
+ * react.css
+ */
+$headerTitle: 'Modules CTI';
+
+$color1 : #6C4C88;
+$color2 : #452F57;
+$color3 : #FAF8FC;
+$color4 : #D2CAD8;
+$color5 : #F2EFF4;
+$color6 : $color1;
+$color7 : #AD9FB8;
+
+$content: $color3;
+$loginbackground: $color3;
+$headerbackground: $color1;
+$textcolor: $color1;
+$headercolor: white;
+$tileheaderbackground: $color4;
+$selectcolor: $color2;
+$navigationcolor: white;
+
+$toets  : url('toets-inf.svg');
+$lesstof: url('lesstof-inf.svg');
+
+$module: url('module-wa.svg');
+$folder: url('folder-wa.svg');
+$sco:    url('activiteit-wa.svg');
+$info:   url('info-inf.svg');
+
+@import "_template.scss";
+
+section.profile-login {
+	background-color: $loginbackground;
+	background-image: url('react-inlogscherm.png');
+	background-size: cover;
+}
+
+.profile-headerLogo::before {
+	font-size: 24px;
+}
+.profile-loginTitle::before {
+	height: 100px;
+	
+}
+body:not(.modernstyle) #modulesDisplayPanel {
+	position: absolute;
+//	right: 54px;
+	width: unset;
+//	left: 54px;
+}
+
+body.ANONYMOUS section#modulesDisplayPanel {
+	left: 0px !important;
+}
+
+.modernstyle {
+	#modulesDisplayPanel {
+		top: 0px;
+		bottom: 0px;
+	}
+	#welcomeDisplayPanel section {
+		padding-top: 130px;
+	}
+}
+.modernstyle main#mainPanel nav.open {
+	top: 72px;
+}
+
+body.ANONYMOUS.modernstyle #mainPanel > header #menuToggle {
+	display: none;
+}
+
+main#mainPanel.expandedNav nav {
+  background-color: $color7;
+  box-shadow: none;
+  top: 72px;
+}
+
+@media (min-width: 1366px) { 
+	body.modernstyle:not(.collapsed) #mainPanel nav {
+    	background-color: $color7;
+    	box-shadow: none;
+    	top: 72px;
+	}
+}
+
+//.modernstyle main#mainPanel:not(.expandedNav) nav:not(.open) {
+//	top: 130px;
+//}
+
+main#mainPanel {
+  background-color: white;
+  > header {
+	background-image: linear-gradient(#6C4C88, $color7);
+	height: 62px;
+	padding-top: 10px;
+	#mainrole {
+		vertical-align: 20px;
+	}
+  }
+  nav {
+	top: 72px;
+	ul {
+		margin-left: 14px;
+		li.profile-welcome {
+			display: list-item;
+			
+		}
+		li a {
+		color: white;
+		.icon {
+			background-color: white;
+			use {
+				fill: $color1;
+			}
+		 	.fa-inverse {
+    			color: white;
+    			background-color: $color1;
+			}
+		}
+		span.icon {
+			background-color: $color1;
+		}
+		
+		
+		
+		}
+  	}
+  }
+  .subpanel header {
+	top: 72px;
+	.pageIcon {
+		display: none;
+  	}
+  }
+  .subpanel.iframepanel {
+	padding-top: 72px;
+  }
+ 
+  table.dwo.results thead tr:nth-child(1) th:first-child:before {
+	background-color: white;
+  }
+}
+
+
+
+body:not(.modernstyle) {
+	#mainPanel.expandedNav nav ul {
+		margin-top: 18px;
+	}
+	.subpanel header {
+		left: 54px;
+		div.content {
+			margin-left: 18px;
+		}
+	}
+}
+
+
+@media only screen and (min-width: 1366px) {
+	#modulesDisplayPanel {
+		left: 212px;
+		right:212px;
+	}
+	.subpanel header {
+		left: 212px;
+	}
+	main#mainPanel nav {
+	  box-shadow: none;
+	  ul {
+//			margin-top: 18px;
+	  }
+	}
+}
+
+@media only screen and (max-width: 1650px) {
+	
+	body:not(.modernstyle) {
+		main#mainPanel {
+			&.expandedNav .subpanel {
+			header {
+				left: 212px;
+			}
+		}		
+		nav {
+		width: 54px;
+			ul li a .name {
+    		display: none;
+		}
+
+		}
+		.subpanel {
+		margin-right: -54px;	
+		header {
+			left: 54px;
+		}
+	}
+	
+	}
+	}
+	main#mainPanel {
+	&.expandedNav .subpanel {
+		margin-right: -212px;
+	}
+	nav {
+		ul li a .name {
+    		line-height: 26px;
+		}
+	}
+	
+	.subpanel {
+		margin-right: -54px;	
+	}
+	#modulesDisplayPanel {
+		left: 54px;
+		right: 54px;
+	}
+}}
+
+#mainPanel nav ul li a .icon use {
+	fill: $color5;
+}
+
+#loginDisplayPanel .container .profile-loginTitle::before {
+	color: white;
+}
+
+div#loginBox {
+	left: 0px !important;
+	.profile-loginPanel {
+    	background-color: transparent;
+		color: white;
+		padding: 0px !important;
+	}
+
+	.profile-loginLinks {
+		color: white;
+		a {
+			color: white;
+		}
+	}
+}
+
+
+
+.gwt-Tree .gwt-TreeItem-selected {
+	background: $color5 !important;
+	color: $color2;
+}
+
+.navCellList.cellListWidget .cellListSelectedItem,
+.navCellList.cellListWidget  .cellListEvenItem:hover, 
+.navCellList.cellListWidget  .cellListOddItem:hover {
+	background: $color5 !important;
+	color: $color2 !important;
+}
