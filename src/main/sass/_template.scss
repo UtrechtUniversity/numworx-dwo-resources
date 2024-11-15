@@ -184,6 +184,15 @@ div:hover > .profile-tile .profile-tileBody {
 }
 
 .modernstyle {
+	div.filter-dialog {
+	  z-index: 600;
+	 .popupContent {
+		background: $color4;
+		.header {
+			color: $color1;
+		}
+	}
+	}
 	#mainPanel {
 		background-color: $color7;
 		.subpanel, table.dwo.results thead tr:nth-child(1) th:first-child:before {
@@ -231,7 +240,7 @@ div:hover > .profile-tile .profile-tileBody {
 	}
 }
 
-#mainPanel {
+#mainPanel, .filter-dialog {
 
 .options .option label {
 	color: white;
