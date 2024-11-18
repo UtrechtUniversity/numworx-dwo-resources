@@ -535,3 +535,16 @@ div.date-Label {
 	}
 	
 }
+
+.modernstyle {
+	.gwt-DialogBox.gwt-DialogBox-Node
+	{
+		.dialogMiddleRight,.dialogMiddleLeft,
+		.dialogBottomCenter,.dialogBottomLeft,.dialogBottomRight,
+		.dialogTopLeft,.dialogTopRight,.dialogTopCenter
+		{ 
+			background-color: $color1;
+		}
+	} 
+}
+
