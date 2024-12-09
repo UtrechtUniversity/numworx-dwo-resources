@@ -37,9 +37,20 @@ section.profile-login {
 }
 
 .profile-headerLogo::before {
+        content: '';
+        background-image: url('cti-logo.png');
+        background-size: 150px 45px;
+        background-repeat: no-repeat;
+        height: 45px;
+        width: 180px;
+
 	font-size: 24px;
 }
 .profile-loginTitle::before {
+        content: '';
+        background-image: url('cti-logo.png');
+        background-size: 300px 100px;
+        background-repeat: no-repeat;
 	height: 100px;
 	
 }
