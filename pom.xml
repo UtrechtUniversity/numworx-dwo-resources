@@ -141,4 +141,13 @@
 			</snapshots>
     	</repository>
     </repositories>
+    <pluginRepositories>
+		<pluginRepository>
+    		<url>https://repo1.maven.org/maven2/</url>
+    		<id>public</id>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
 </project>
