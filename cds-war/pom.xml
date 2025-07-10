@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>nl.uu.fi.dwo</groupId>
+		<version>2.5.43-SNAPSHOT</version>
+		<relativePath>../</relativePath>
+		<artifactId>resources-parent</artifactId>
+	</parent>
+  <artifactId>cds-war</artifactId>
+  <packaging>war</packaging>
+  <name>cds war</name>
+  <properties>
+  	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+  <build>
+    <plugins>
+  		<plugin>
+  			<artifactId>maven-war-plugin</artifactId>
+        	<version>3.2.3</version>
+  			<configuration>
+  			</configuration>
+  		</plugin>
+  		
+  		 <plugin>
+        	<!-- Jetty < 9 is in org.mortbay.jetty groupId -->
+            <groupId>org.eclipse.jetty</groupId>
+            <version>9.4.51.v20230217</version>
+            <!-- Starting from Jetty 9 groupId is org.eclipse.jetty already -->
+            <!-- <groupId>org.eclipse.jetty</groupId> -->
+            <!-- Change to latest version available from http://search.maven.org/#search%7Cgav%7C1%7Cg%3A%22org.eclipse.jetty%22%20AND%20a%3A%22jetty-maven-plugin%22 -->
+            <!-- <version>9.x.y.z</version> -->
+            <artifactId>jetty-maven-plugin</artifactId>
+            <configuration>
+            </configuration>
+        </plugin>
+  		
+  	</plugins>
+
+  </build>
+  <distributionManagement>
+	<repository>
+	   <id>release</id>
+	   <name>libs-release-local</name>
+	   <url>https://repos.dwo.nl/artifactory/libs-release-local</url>
+	</repository>
+	<snapshotRepository>
+	   <id>snapshots</id>
+	   <name>libs-snapshot-local</name>
+	   <url>https://repos.dwo.nl/artifactory/libs-snapshot-local</url>
+	</snapshotRepository>
+  </distributionManagement>
+</project>
