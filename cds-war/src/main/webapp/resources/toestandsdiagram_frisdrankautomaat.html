@@ -1,0 +1,627 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8">
+
+    <script>
+
+      /**************************************************
+      * Constanten
+      *
+      * Hieronder de variabelen die in het gehele 
+      * spel dezelfde waarden houden
+      **************************************************/
+      // afmetingen van het canvas
+      var canvasWidth = 870;
+      var canvasHeight = 600;
+      
+      
+      /**************************************************
+      * Globale variabelen
+      *
+      * Dit zijn variabelen die in het
+      * gehele spel beschikbaar zijn
+      **************************************************/
+
+      var toestand = 1;
+      var inworp = 0;
+     
+      /**************************************************
+      * Event listeners
+      *
+      * Een event listener is een stukje programma dat 
+      * reageert op een gebeurtenis.
+      * Bijvoorbeeld het aanraken van een toets
+      **************************************************/
+           
+
+      /**************************************************
+      * Klassen 
+      *
+      * Klassen zijn de bouwstenen van het spel
+      * Bijvoorbeeld een achtergrond, poppetjes, blokjes
+      * autootjes en wat je maar wilt
+      * Hieronder een klasse om de achtergrond te tekenen
+      **************************************************/
+
+      /**************************************************
+      * Klasse: Achtergrond
+      * x, y   (positie van de linkerbovenhoek)
+      * color  (de kleur van de achtergrond)
+      **************************************************/
+
+      // De klasse begint met de functie
+      function Achtergrond(x, y, color) {
+        this.x = x;
+        this.y = y;
+        this.color = color;
+        this.width = canvasWidth;
+        this.height = canvasHeight;
+      }
+
+      // En aan die klasse kunnen we (met prototype) 
+      // weer een nieuwe functie hangen, bijvoorbeeld 
+      // zoals hier, om de achtergrond te tekenen
+      Achtergrond.prototype.render = function () {
+        ctx.fillStyle = this.color;
+        ctx.fillRect(this.x, this.y, this.width, this.height);
+      }
+
+      /**************************************************
+      * Klasse: Cirkel
+      * x, y   (positie van de linkerbovenhoek)
+      * straal (afstand van het middelpunt tot de rand)
+      * kleur  (de kleur van de achtergrond)
+      **************************************************/
+
+      // De klasse begint met de functie
+      function Cirkel(x, y, straal, kleur, tekst) {
+        this.x = x;
+        this.y = y;
+        this.straal = straal;
+        this.kleur = kleur;
+        this.rand = "black";
+        this.tekst = tekst;
+      }
+
+      // En aan die klasse kunnen we (met prototype) 
+      // weer een nieuwe functie hangen, bijvoorbeeld 
+      // zoals hier, om de achtergrond te tekenen
+      Cirkel.prototype.render = function () {
+        ctx.fillStyle = this.kleur;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.straal, 0, Math.PI*2, true);
+        ctx.fill();
+
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = this.rand;
+        ctx.stroke();
+
+        ctx.lineWidth = 1;
+        ctx.font = "14px sans-serif";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillStyle = "black";
+        ctx.fillText(this.tekst, this.x, this.y);
+
+      }
+
+      // Als er iets veranderd zoals de positie of de kleur
+      // dan moet dat in de update functie geregeld worden
+      Cirkel.prototype.update = function () {
+
+      }
+
+
+      /**************************************************
+      * Klasse: DeelCirkel
+      * x, y   (positie van de linkerbovenhoek)
+      * straal (afstand van het middelpunt tot de rand)
+      * startHoek (begin van het cirkeldeel)
+      * eindHoek  (eind van het cirkeldeel)
+      * antiKlok  (true bij tegen de wijzers van de klok in)
+      * positie  (de plaats t.o.v. de verwante cirkel)
+      * kleur (de kleur van de pijl)
+      **************************************************/
+
+      // De klasse begint met de functie
+      function DeelCirkel(x, y, straal, startHoek, eindHoek, antiKlok, positie, kleur) {
+        this.basisx = x;
+        this.basisy = y;
+        if (positie == "rechts") {
+          this.x = x+70;
+        } else {
+          this.x = x;
+        }
+        if (positie == "boven") {
+          this.y = y-70;
+        } else {
+          this.y = y;
+        }
+        this.straal = straal;
+        this.startHoek = startHoek;
+        this.eindHoek  = eindHoek;
+        this.antiKlok  = antiKlok;
+        this.kleur = kleur;
+
+      }
+
+      // En aan die klasse kunnen we (met prototype) 
+      // weer een nieuwe functie hangen, bijvoorbeeld 
+      // zoals hier, om de achtergrond te tekenen
+      DeelCirkel.prototype.render = function () {
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = this.kleur;
+        ctx.beginPath();
+        ctx.arc(this.x, this.y, this.straal, this.startHoek, this.eindHoek, this.antiKlok);
+        ctx.stroke();
+      }
+
+      /**************************************************
+      * Klasse: Pijl
+      * vanx, vany (van x, van y)
+      * totx, toty (tot x, tot y)
+      * kleur  (kleur van de pijl)
+      * pijlLengte (lengte van de pijldelen)
+      * tekst1, tekst2 (eerste en tweede regel tekst)
+      * tekstx, tekst7 (positie van de eerste tegel tekst)
+      **************************************************/
+
+      // De klasse begint met de functie
+      function Pijl(vanx, vany, totx, toty, kleur, pijlLengte, tekst1, tekst2, tekstx, teksty) {
+        this.vanx = vanx;
+        this.vany = vany;
+        this.totx = totx;
+        this.toty = toty;
+        this.kleur = kleur;
+        this.pijlLengte = pijlLengte;
+        this.tekst1 = tekst1;
+        this.tekst2 = tekst2;
+        this.tekstx = tekstx;
+        this.teksty = teksty;
+      }
+
+      // En aan die klasse kunnen we (met prototype) 
+      // weer een nieuwe functie hangen, bijvoorbeeld 
+      // zoals hier, om de pijl te tekenen
+      Pijl.prototype.render = function () {
+        
+        var hoek = Math.atan2((this.toty-this.vany),(this.totx-this.vanx));
+        ctx.beginPath();
+        ctx.moveTo(this.vanx, this.vany);
+        ctx.lineTo(this.totx, this.toty);
+        ctx.strokeStyle = this.kleur;
+        ctx.stroke();
+        ctx.lineTo(this.totx-this.pijlLengte*Math.cos(hoek-Math.PI/6),this.toty-this.pijlLengte*Math.sin(hoek-Math.PI/6));
+        ctx.lineTo(this.totx-this.pijlLengte*Math.cos(hoek+Math.PI/6),this.toty-this.pijlLengte*Math.sin(hoek+Math.PI/6));
+		    ctx.lineTo(this.totx, this.toty);
+        ctx.fillStyle = this.kleur;
+        ctx.fill();
+
+        ctx.lineWidth = 3;
+        ctx.font = "14px sans-serif";
+        ctx.textAlign = "start";
+        ctx.textBaseline = "alphabetic";
+        ctx.fillStyle = "black";
+        ctx.fillText(this.tekst1, this.tekstx, this.teksty);
+        ctx.fillText(this.tekst2, this.tekstx, this.teksty+15);
+
+      }
+
+      /**************************************************
+      * Klasse: Knop
+      * x, y
+      * breedte, hoogte
+      * kleur  (kleur van de knop)
+      **************************************************/
+
+      // De klasse begint met de functie
+      function Knop(x, y, breedte, hoogte, kleur, tekst) {
+        this.x = x;
+        this.y = y;
+        this.breedte = breedte;
+        this.hoogte = hoogte;
+        this.kleur = kleur;
+        this.tekst = tekst;
+      }
+
+      // En aan die klasse kunnen we (met prototype) 
+      // weer een nieuwe functie hangen, bijvoorbeeld 
+      // zoals hier, om de pijl te tekenen
+      Knop.prototype.render = function () {
+        
+        ctx.fillStyle = this.kleur;
+        ctx.fillRect(this.x, this.y, this.breedte, this.hoogte);
+        ctx.font = "14px courier";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillStyle = "black";
+        ctx.fillText(this.tekst, this.x + this.breedte/2, this.y+this.hoogte/2);
+        ctx.fillText(this.tekst, this.x + this.breedte/2, this.y+this.hoogte/2);
+
+
+      }
+
+      /**************************************************
+      * Klasse: Toelichting
+      * x, y
+      * breedte, hoogte
+      * kleur
+      **************************************************/
+
+      // De klasse begint met de functie
+      function Toelichting(x, y, tekst) {
+        this.x = x;
+        this.y = y;
+        this.tekst = tekst;
+      }
+
+      // En aan die klasse kunnen we (met prototype) 
+      // weer een nieuwe functie hangen, bijvoorbeeld 
+      // zoals hier, om de tekst te tekenen
+      Toelichting.prototype.render = function () {
+        
+        ctx.fillStyle = this.kleur;
+        ctx.fillRect(this.x, this.y, this.breedte, this.hoogte);
+        ctx.font = "18px sans-serif";
+        ctx.textAlign = "left";
+        ctx.textBaseline = "middle";
+        ctx.fillStyle = "black";
+        ctx.fillText(this.tekst, this.x, this.y);
+
+      }
+
+
+      /**************************************************
+      * Initialisatie 
+      *
+      * Hier begint dan het eigenlijke programma
+      **************************************************/
+            
+      // Het canvas element aanmaken
+      var canvas = document.createElement("canvas");
+      
+      // De canvas variabelen vastleggen
+      canvas.width = canvasWidth;
+      canvas.height = canvasHeight;
+      
+      // De context van het canvas opvragen zodat we het 
+      // canvas steeds met ctx kunnen aanroepen
+      var ctx = canvas.getContext('2d');
+
+      // En hang nu het canvas maar in de body
+      window.onload = function() {
+        // voeg canvas toe aan de body
+        document.body.appendChild(canvas);
+        // begin de animatie
+        animatie(stap);                     
+      };
+      
+      /**************************************************
+      * Functies
+      *
+      * Programmma-onderdelen die kunnen worden 
+      * aangeroepen
+      **************************************************/
+      
+      
+      //Function to get the mouse position
+      function getMousePos(canvas, event) {
+        var rect = canvas.getBoundingClientRect();
+        return {
+          x: event.clientX - rect.left,
+          y: event.clientY - rect.top
+        }
+      };
+
+      //Function to check whether a point is inside a rectangle
+      function isKnop1(pos, knop1) {
+        return pos.x > knop1.x && pos.x < knop1.x+knop1.breedte && pos.y < knop1.y+knop1.hoogte && pos.y > knop1.y
+      };
+
+      function isKnop2(pos, knop2) {
+        return pos.x > knop2.x && pos.x < knop2.x+knop2.breedte && pos.y < knop2.y+knop2.hoogte && pos.y > knop2.y
+      };
+
+      //Binding the click event on the canvas
+      canvas.addEventListener('click', function(evt) {
+          var mousePos = getMousePos(canvas, evt);
+
+          switch(toestand) {
+            case 1:
+              if (isKnop1(mousePos, knop1)) {
+                toestand = 2;
+                kleurenUit();
+                toelichting1.tekst = "Het systeem gaat naar toestand 2";
+                pijlAan(4);
+                setTimeout(pijlUit, 750);
+              }
+              if (isKnop2(mousePos, knop2)) {
+                toestand = 3;
+                kleurenUit();
+                toelichting1.tekst = "Het systeem gaat naar toestand 3";
+                pijlAan(2);
+                setTimeout(pijlUit, 750);
+              }
+              break;
+            case 2:
+              if (isKnop1(mousePos, knop1)) {
+                toestand = 3;
+                kleurenUit();
+                toelichting1.tekst = "Het systeem gaat naar toestand 3";
+                pijlAan(5);
+                setTimeout(pijlUit, 750);
+              }
+              if (isKnop2(mousePos, knop2)) {
+                toestand = 4;
+                kleurenUit();
+                toelichting1.tekst = "Het systeem gaat naar toestand 4";
+                pijlAan(7);
+                setTimeout(pijlUit, 750);
+              }
+              break;
+            case 3:
+              if (isKnop1(mousePos, knop1)) {
+                toestand = 4;
+                kleurenUit();
+                toelichting1.tekst = "Het systeem gaat naar toestand 4";
+                pijlAan(6);
+                setTimeout(pijlUit, 750);
+              }
+              if (isKnop2(mousePos, knop2)) {
+                toestand = 5;
+                kleurenUit();
+                toelichting1.tekst = "Het systeem gaat naar toestand 5";
+                pijlAan(3);
+                setTimeout(pijlUit, 750);
+              }
+              break;
+            case 4:
+              if (isKnop1(mousePos, knop1)) {
+                toestand = 5;
+                kleurenUit();
+                toelichting1.tekst = "Het systeem gaat naar toestand 5";
+                pijlAan(8);
+                setTimeout(pijlUit, 750);
+              }
+              if (isKnop2(mousePos, knop2)) {
+                toestand = 5;
+                kleurenUit();
+                toelichting1.tekst = "Het systeem gaat naar toestand 5";
+                pijlAan(9);
+                setTimeout(pijlUit, 750);
+              }
+              break;
+            case 5:
+              if (isKnop1(mousePos, knop1)) {
+                toestand = 5;
+                toelichting1.tekst = "Het systeem blijft in toestand 5";
+                pijlAan(10);
+                setTimeout(pijlUit, 750);
+              }
+              if (isKnop2(mousePos, knop2)) {
+                toestand = 5;
+                toelichting1.tekst = "Het systeem blijft in toestand 5";
+                pijlAan(11);
+                setTimeout(pijlUit, 750);
+              }
+              break;
+          }
+        }, false
+      );
+
+      function kleurenUit() {
+        cirkel1.kleur = "lightgrey";
+        cirkel2.kleur = "lightgrey";
+        cirkel3.kleur = "lightgrey";
+        cirkel4.kleur = "lightgrey";
+        cirkel5.kleur = "lightgrey";
+
+        pijl02.kleur  = "black";
+        pijl03.kleur  = "black";
+        pijl04.kleur  = "black";
+        pijl05.kleur  = "black";
+        pijl06.kleur  = "black";
+        pijl07.kleur  = "black";
+        pijl08.kleur  = "black";
+        pijl09.kleur  = "black";
+        pijl10.kleur  = "black";
+        pijl11.kleur  = "black";
+
+        deelCirkel1.kleur = "black";
+        deelCirkel2.kleur = "black";
+        deelCirkel3.kleur = "black";
+        deelCirkel4.kleur = "black";
+      }
+
+      function pijlAan(nummer) {
+        switch(nummer) {
+          case 2:
+            pijl02.kleur = "red";        
+            break;
+          case 3:
+            pijl03.kleur = "red";
+            break;
+          case 4:
+            pijl04.kleur = "red";
+            break;
+          case 5:
+            pijl05.kleur = "red";
+            break;
+          case 6:
+            pijl06.kleur = "red";
+            break;
+          case 7:
+            pijl07.kleur = "red";
+            break;
+          case 8:
+            pijl08.kleur = "red";
+            deelCirkel3.kleur = "red";
+            break;
+          case 9:
+            pijl09.kleur = "red";
+            deelCirkel4.kleur = "red";
+            break;
+          case 10:
+            pijl10.kleur = "red";
+            deelCirkel1.kleur = "red";
+            break;
+          case 11:
+            pijl11.kleur = "red";
+            deelCirkel2.kleur = "red";
+            break;
+        }
+      }
+
+      function pijlUit() {
+        kleurenUit();
+        wijzigToestand();
+      }
+
+      function wijzigToestand() {
+        switch(toestand) {
+          case 1:
+            cirkel1.kleur = "red";
+            toelichting1.tekst = "Het systeem is in toestand 1";
+            toelichting2.tekst = "De inworp is € 0,00";
+            break;
+          case 2:
+            cirkel2.kleur = "red";
+            toelichting1.tekst = "Het systeem is in toestand 2";
+            toelichting2.tekst = "De inworp is € 0,50";
+            break;
+          case 3:
+            cirkel3.kleur = "red";
+            toelichting1.tekst = "Het systeem is in toestand 3";
+            toelichting2.tekst = "De inworp is € 1,00";
+            break;
+          case 4:
+            cirkel4.kleur = "red";
+            toelichting1.tekst = "Het systeem is in toestand 4";
+            toelichting2.tekst = "De inworp is € 1,50";
+            break;
+          case 5:
+            cirkel5.kleur = "red";
+            toelichting1.tekst = "Het systeem is in toestand 5";
+            toelichting2.tekst = "De inworp is € 2,00, verdere inworp is zinloos.";
+            break;
+        }
+      }
+
+
+
+     /**************************************************
+      * De objectvariabelen
+      *
+      * De objectvariabelen gebruiken we door van een 
+      * klasse een object te maken met het woordje new
+      **************************************************/
+      
+      // De achtergrond
+      var achtergrond = new Achtergrond(0, 0, "navajowhite");
+      var cirkel1 = new Cirkel(150, 150, 50, "red", "0 euro");
+      var cirkel2 = new Cirkel(275, 350, 50, "lightgrey", "0,5 euro");
+      var cirkel3 = new Cirkel(400, 150, 50, "lightgrey", "1 euro");
+      var cirkel4 = new Cirkel(525, 350, 50, "lightgrey", "1,5 euro");
+      var cirkel5 = new Cirkel(650, 150, 50, "lightgrey", "2 euro");
+
+      var deelCirkel1 = new DeelCirkel(650, 150, 35, 0.75*Math.PI, 1.25*Math.PI, true, "rechts", "black");
+      var deelCirkel2 = new DeelCirkel(650, 150, 35,   Math.PI/4,  3*Math.PI/4, true, "boven", "black");
+      var deelCirkel3 = new DeelCirkel(710, 374, 250, 1.27*Math.PI, 1.09*Math.PI, true, "rechts", "black");
+      var deelCirkel4 = new DeelCirkel(395, 200, 250, 0.086*Math.PI, 0.267*Math.PI, false, "boven", "black" );
+
+      var pijl01   = new Pijl(50, 150, 100,150, "black", 10, "Start", "",60, 140);
+      var pijl02   = new Pijl(200, 150, 350, 150, "black", 10, "Inworp € 1,-", "", 225, 140);
+      var pijl03   = new Pijl(450, 150, 600, 150, "black", 10, "Inworp € 1,-", "", 475, 140);
+      var pijl04   = new Pijl((150+26.5), (150+42.5), (275-26.5), (350-42.5), "black", 10, "Inworp", "€ 0,50", 160, 250);
+      var pijl05   = new Pijl((275+26.5), (350-42.5), (400-26.5), (150+42.5), "black", 10, "Inworp", "€ 0,50", 280, 250);
+      var pijl06   = new Pijl((400+26.5), (150+42.5), (525-26.5), (350-42.5), "black", 10, "Inworp", "€ 0,50", 410, 250);
+      var pijl07   = new Pijl(325, 350, 475, 350, "black", 10, "Inworp € 1,-", "", 350, 340);
+      
+      var pijl08   = new Pijl(610, 190, 614, 186, "black", 10, "Inworp", "€ 0,50", 520, 230);
+      
+      var pijl09   = new Pijl(635, 202, 636, 198, "black", 10, "Inworp", "€ 1,-", 630, 250);
+      
+      var pijl10   = new Pijl(700, 122, 695, 126, "black", 10, "Inworp", "€ 0,50", 765, 147);
+      var pijl11   = new Pijl(622, 101, 625, 105, "black", 10, "Inworp", "€ 1,-", 695, 70);
+
+      var knop1 = new Knop(230, 450, 90, 40, "dodgerblue", "€ 0,50");
+      var knop2 = new Knop(480, 450, 90, 40, "Chocolate" , "€ 1,00");
+
+      var toelichting1 = new Toelichting(50, 550, "Het systeem is in toestand 1");
+      var toelichting2 = new Toelichting(480, 550, "De inworp is € 0,00");
+      var toelichting3 = new Toelichting(100, 470, "Inworp  >>>>>")
+
+      /**************************************************
+      * animatie 
+      *
+      * Tenslotte starten we de animatie en begint 
+      * alles wat je maar wilt te bewegen
+      **************************************************/
+             
+      // animatieframe starten
+      var animatie = window.requestAnimationFrame;
+      //var timer = window.setInterval(wijzigKleur, 750);
+
+      
+      // stap functie (herhaalt steeds het animatieproces)
+      var stap = function () {
+          update();
+          clearCanvas();
+          render();
+          animatie(stap);
+      };
+
+      // update functie (ververst de (waarden van de) objecten)
+      var update = function () {
+        cirkel1.update();
+        cirkel2.update();
+        cirkel3.update();
+        cirkel4.update();
+        cirkel5.update();
+      };
+
+      // canvas schoonmaken
+      var clearCanvas = function () {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+      }
+
+      // De render functie tekent het canvas opnieuw 
+      // met daarin de objecten
+      var render = function () {
+        achtergrond.render();
+        cirkel1.render();
+        cirkel2.render();
+        cirkel3.render();
+        cirkel4.render();
+        cirkel5.render();
+        deelCirkel1.render();
+        deelCirkel2.render();
+        deelCirkel3.render();
+        deelCirkel4.render();
+        pijl01.render();
+        pijl02.render();
+        pijl03.render();
+        pijl04.render();
+        pijl05.render();
+        pijl06.render();
+        pijl07.render();
+        pijl08.render();
+        pijl09.render();
+        pijl10.render();
+        pijl11.render();
+
+        knop1.render();
+        knop2.render();
+
+        toelichting1.render();
+        toelichting2.render();
+        toelichting3.render();
+      };
+
+    </script>
+  </head>
+  <body>
+  </body>
+</html>
