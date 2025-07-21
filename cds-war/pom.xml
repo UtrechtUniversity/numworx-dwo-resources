@@ -15,6 +15,7 @@
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
   <build>
+	<finalName>${project.artifactId}</finalName>
     <plugins>
   		<plugin>
   			<artifactId>maven-war-plugin</artifactId>
@@ -35,6 +36,46 @@
             <configuration>
             </configuration>
         </plugin>
+  		<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-dependency-plugin</artifactId>
+				<version>2.10</version>
+				<executions>
+					<execution>
+						<id>copy-dependencies</id>
+						<goals>
+							<goal>copy-dependencies</goal>
+						</goals>
+						<configuration>
+							<includeScope>runtime</includeScope>
+							<outputDirectory>${project.build.directory}/${project.artifactId}/jars/</outputDirectory>
+							<stripVersion>true</stripVersion>
+							<stripClassifier>true</stripClassifier>
+							<excludeGroupIds>nl.uu.fi.dwo,nl.numworx.swingbrowser,com.teamdev.jxbrowser,fi.euclides</excludeGroupIds>
+							<excludeArtifactIds>numworxlf,jcalendar,genson,geodefiner-common,fi.dwo.eawt,dagger,om-lib,javax.inject</excludeArtifactIds>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>biz.aQute.bnd</groupId>
+				<artifactId>bnd-indexer-maven-plugin</artifactId>
+				<version>3.3.0</version>
+				<executions>
+					<execution>
+						<id>local-index</id>
+						<goals>
+							<goal>local-index</goal>
+						</goals>
+						<phase>package</phase>
+						<configuration>
+							<inputDir>${project.build.directory}/${project.artifactId}/jars/</inputDir>
+							<outputFile>${project.build.directory}/${project.artifactId}/jars/index.xml</outputFile>
+							<indexName>jars</indexName>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
   		
   	</plugins>
 
@@ -51,4 +92,22 @@
 	   <url>https://repos.dwo.nl/artifactory/libs-snapshot-local</url>
 	</snapshotRepository>
   </distributionManagement>
+  <dependencies>
+  	<dependency>
+  		<groupId>fi.wiskopdr</groupId>
+  		<artifactId>wiskopdr</artifactId>
+  		<version>2.0.3-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  		<exclusions>
+  			<exclusion>
+  				<groupId>nl.uu.fi.dwo</groupId>
+  				<artifactId>DWOJClient</artifactId>
+  			</exclusion>
+  			<exclusion>
+  				<groupId>fi.mathscratch</groupId>
+  				<artifactId>mathscratch-common</artifactId>
+  			</exclusion>
+  		</exclusions>
+  	</dependency>
+  </dependencies>
 </project>
