@@ -17,13 +17,6 @@
   <build>
 	<finalName>${project.artifactId}</finalName>
     <plugins>
-  		<plugin>
-  			<artifactId>maven-war-plugin</artifactId>
-        	<version>3.2.3</version>
-  			<configuration>
-  			</configuration>
-  		</plugin>
-  		
   		 <plugin>
         	<!-- Jetty < 9 is in org.mortbay.jetty groupId -->
             <groupId>org.eclipse.jetty</groupId>
@@ -34,6 +27,9 @@
             <!-- <version>9.x.y.z</version> -->
             <artifactId>jetty-maven-plugin</artifactId>
             <configuration>
+				<httpConnector>
+					<port>9999</port>
+				</httpConnector>
             </configuration>
         </plugin>
   		<plugin>
@@ -50,33 +46,85 @@
 							<includeScope>runtime</includeScope>
 							<outputDirectory>${project.build.directory}/${project.artifactId}/jars/</outputDirectory>
 							<stripVersion>true</stripVersion>
-							<stripClassifier>true</stripClassifier>
-							<excludeGroupIds>nl.uu.fi.dwo,nl.numworx.swingbrowser,com.teamdev.jxbrowser,fi.euclides</excludeGroupIds>
-							<excludeArtifactIds>numworxlf,jcalendar,genson,geodefiner-common,fi.dwo.eawt,dagger,om-lib,javax.inject</excludeArtifactIds>
+							<stripClassifier>false</stripClassifier>
+							<excludeTransitive>true</excludeTransitive>
 						</configuration>
 					</execution>
 				</executions>
 			</plugin>
+		      <plugin>
+		        <groupId>com.coderplus.maven.plugins</groupId>
+		        <artifactId>copy-rename-maven-plugin</artifactId>
+		        <version>1.0</version>
+		        <executions>
+		          <execution>
+		            <id>rename-file</id>
+		            <phase>prepare-package</phase>
+		            <goals>
+		              <goal>rename</goal>
+		            </goals>
+		            <configuration>
+		              <fileSets>
+		                <fileSet>
+		                  <sourceFile>${project.build.directory}/${project.artifactId}/jars/wiskopdr-geodefiner.jar</sourceFile>
+		                  <destinationFile>${project.build.directory}/${project.artifactId}/jars/geodefiner.jar</destinationFile>
+		                </fileSet>
+		                <fileSet>
+		                  <sourceFile>${project.build.directory}/${project.artifactId}/jars/wiskopdr-geogebra3widget.jar</sourceFile>
+		                  <destinationFile>${project.build.directory}/${project.artifactId}/jars/geogebra3widget.jar</destinationFile>
+		                </fileSet>                
+		                <fileSet>
+		                  <sourceFile>${project.build.directory}/${project.artifactId}/jars/wiskopdr-geogebra4widget.jar</sourceFile>
+		                  <destinationFile>${project.build.directory}/${project.artifactId}/jars/geogebra4widget.jar</destinationFile>
+		                </fileSet>                
+		                <fileSet>
+		                  <sourceFile>${project.build.directory}/${project.artifactId}/jars/wiskopdr-balansfruitapplet.jar</sourceFile>
+		                  <destinationFile>${project.build.directory}/${project.artifactId}/jars/balansfruitapplet.jar</destinationFile>
+		                </fileSet>                
+		                <fileSet>
+		                  <sourceFile>${project.build.directory}/${project.artifactId}/jars/wiskopdr-graphtool.jar</sourceFile>
+		                  <destinationFile>${project.build.directory}/${project.artifactId}/jars/graphtool.jar</destinationFile>
+		                </fileSet>                
+		                <fileSet>
+		                  <sourceFile>${project.build.directory}/${project.artifactId}/jars/wiskopdr-mathscratch.jar</sourceFile>
+		                  <destinationFile>${project.build.directory}/${project.artifactId}/jars/mathscratch.jar</destinationFile>
+		                </fileSet>                
+		                <fileSet>
+		                  <sourceFile>${project.build.directory}/${project.artifactId}/jars/wiskopdr-statistiek.jar</sourceFile>
+		                  <destinationFile>${project.build.directory}/${project.artifactId}/jars/statistiek.jar</destinationFile>
+		                </fileSet>                
+		              </fileSets>
+		            </configuration>
+		          </execution>
+		        </executions>
+		      </plugin>
 			<plugin>
 				<groupId>biz.aQute.bnd</groupId>
 				<artifactId>bnd-indexer-maven-plugin</artifactId>
-				<version>3.3.0</version>
+				<version>5.3.0</version>
 				<executions>
 					<execution>
 						<id>local-index</id>
 						<goals>
 							<goal>local-index</goal>
 						</goals>
-						<phase>package</phase>
+						<phase>prepare-package</phase>
 						<configuration>
 							<inputDir>${project.build.directory}/${project.artifactId}/jars/</inputDir>
 							<outputFile>${project.build.directory}/${project.artifactId}/jars/index.xml</outputFile>
-							<indexName>jars</indexName>
+							<indexName>dwo-jars</indexName>
 						</configuration>
 					</execution>
 				</executions>
 			</plugin>
-  		
+  			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.4.0</version>	  
+				<configuration>
+					<packagingExcludes>WEB-INF/lib/*.jar</packagingExcludes>
+				</configuration> 
+			</plugin>
   	</plugins>
 
   </build>
@@ -98,16 +146,163 @@
   		<artifactId>wiskopdr</artifactId>
   		<version>2.0.3-SNAPSHOT</version>
   		<scope>runtime</scope>
-  		<exclusions>
-  			<exclusion>
-  				<groupId>nl.uu.fi.dwo</groupId>
-  				<artifactId>DWOJClient</artifactId>
-  			</exclusion>
-  			<exclusion>
-  				<groupId>fi.mathscratch</groupId>
-  				<artifactId>mathscratch-common</artifactId>
-  			</exclusion>
-  		</exclusions>
+  	</dependency>
+  	<dependency>
+  		<groupId>fi.javalogoweb</groupId>
+  		<artifactId>javalogoweb</artifactId>
+  		<version>0.0.4-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>fi.kansbomen</groupId>
+  		<artifactId>kansbomen</artifactId>
+  		<version>0.0.4-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>nl.numworx.repl</groupId>
+  		<artifactId>repl</artifactId>
+  		<version>0.0.4-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>fi.statsim</groupId>
+  		<artifactId>statsim</artifactId>
+  		<version>0.0.4-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>fi.previewhtml</groupId>
+  		<artifactId>previewhtml</artifactId>
+  		<version>0.0.6-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>nl.numworx.sqlite</groupId>
+  		<artifactId>sqlite</artifactId>
+  		<version>0.0.4-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>nl.numworx.uploadwidget</groupId>
+  		<artifactId>uploadwidget</artifactId>
+  		<version>2.5.43</version>
+  		<scope>runtime</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>fi.draaibank</groupId>
+  		<artifactId>draaibank</artifactId>
+  		<version>0.0.4-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>fi.algebrapijlenopdr</groupId>
+  		<artifactId>algebrapijlenopdr</artifactId>
+  		<version>0.0.4-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>fi.algebraexpressies</groupId>
+  		<artifactId>algebraexpressies</artifactId>
+  		<version>0.0.4-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>nl.numworx.samllogin</groupId>
+  		<artifactId>samllogin</artifactId>
+  		<version>0.0.6-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>fi.mozarch</groupId>
+  		<artifactId>mozarch</artifactId>
+  		<version>0.0.4-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>fi.tegels</groupId>
+  		<artifactId>tegels</artifactId>
+  		<version>0.0.4-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>fi.geomalgebra</groupId>
+  		<artifactId>geomalgebra</artifactId>
+  		<version>0.0.4-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>fi.stroomdiagrammen</groupId>
+  		<artifactId>stroomdiagrammen</artifactId>
+  		<version>0.0.5-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>fi.doorziendwo</groupId>
+  		<artifactId>doorziendwo</artifactId>
+  		<version>0.0.4-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>fi.wiskopdr</groupId>
+  		<artifactId>wiskopdr</artifactId>
+  		<version>2.0.3-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  		<classifier>graphtool</classifier>
+  	</dependency>
+  	<dependency>
+  		<groupId>fi.wiskopdr</groupId>
+  		<artifactId>wiskopdr</artifactId>
+  		<version>2.0.3-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  		<classifier>geodefiner</classifier>
+  	</dependency>
+  	<dependency>
+  		<groupId>fi.wiskopdr</groupId>
+  		<artifactId>wiskopdr</artifactId>
+  		<version>2.0.3-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  		<classifier>mathscratch</classifier>
+  	</dependency>
+  	<dependency>
+  		<groupId>fi.wiskopdr</groupId>
+  		<artifactId>wiskopdr</artifactId>
+  		<version>2.0.3-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  		<classifier>statistiek</classifier>
+  	</dependency>
+  	<dependency>
+  		<groupId>fi.wiskopdr</groupId>
+  		<artifactId>wiskopdr</artifactId>
+  		<version>2.0.3-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  		<classifier>balansfruitapplet</classifier>
+  	</dependency>
+  	<dependency>
+  		<groupId>fi.wiskopdr</groupId>
+  		<artifactId>wiskopdr</artifactId>
+  		<version>2.0.3-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  		<classifier>geogebra3widget</classifier>
+  	</dependency>
+  	<dependency>
+  		<groupId>fi.wiskopdr</groupId>
+  		<artifactId>wiskopdr</artifactId>
+  		<version>2.0.3-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  		<classifier>geogebra4widget</classifier>
+  	</dependency>
+  	<dependency>
+  		<groupId>nl.numworx.uploadwidget</groupId>
+  		<artifactId>uploadwidgetrm</artifactId>
+  		<version>2.5.43</version>
+  		<scope>runtime</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>fi.verknippen</groupId>
+  		<artifactId>verknippen</artifactId>
+  		<version>0.0.4-SNAPSHOT</version>
+  		<scope>runtime</scope>
   	</dependency>
   </dependencies>
 </project>
