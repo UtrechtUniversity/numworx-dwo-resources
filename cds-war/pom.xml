@@ -406,5 +406,40 @@
   		<version>0.0.1-SNAPSHOT</version>
   		<scope>runtime</scope>
   	</dependency>
- </dependencies>
+   	<dependency>
+   		<groupId>nl.numworx.aimodel</groupId>
+   		<artifactId>aimodel</artifactId>
+   		<version>0.0.3-SNAPSHOT</version>
+   	</dependency>
+   	<dependency>
+   		<groupId>fi.binomverdeling</groupId>
+   		<artifactId>binomverdeling</artifactId>
+   		<version>0.0.4-SNAPSHOT</version>
+   	</dependency>
+   	<dependency>
+   		<groupId>fi.heks</groupId>
+   		<artifactId>heks</artifactId>
+   		<version>0.0.4-SNAPSHOT</version>
+   	</dependency>
+   	<dependency>
+   		<groupId>fi.grafiek3dtest</groupId>
+   		<artifactId>grafiek3dtest</artifactId>
+   		<version>0.0.4-SNAPSHOT</version>
+   	</dependency>
+   	<dependency>
+   		<groupId>fi.kladje</groupId>
+   		<artifactId>kladje</artifactId>
+   		<version>1.0.3-SNAPSHOT</version>
+   	</dependency>
+   	<dependency>
+   		<groupId>fi.javalogoweb3d</groupId>
+   		<artifactId>javalogoweb3d</artifactId>
+   		<version>0.0.4-SNAPSHOT</version>
+   	</dependency>
+   	<dependency>
+   		<groupId>fi.spot_problems_dwo</groupId>
+   		<artifactId>spot_problems_dwo</artifactId>
+   		<version>0.0.4-SNAPSHOT</version>
+   	</dependency>
+  </dependencies>
 </project>
