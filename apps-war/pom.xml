@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>nl.uu.fi.dwo</groupId>
-		<version>2.5.43-SNAPSHOT</version>
+		<version>2.5.44-SNAPSHOT</version>
 		<relativePath>../</relativePath>
 		<artifactId>resources-parent</artifactId>
 	</parent>
@@ -56,5 +56,26 @@
 	</snapshotRepository>
   </distributionManagement>
   <dependencies>
+  <dependency>
+  	<groupId>nl.uu.fi.dwo.mobile</groupId>
+  	<artifactId>WiskOpdrPlayer</artifactId>
+  	<version>${project.version}</version>
+  	<scope>runtime</scope>
+  	<type>war</type>
+  </dependency>
+  <dependency>
+  	<groupId>nl.numworx.leerdoelwidget</groupId>
+  	<artifactId>LeerdoelWidgetGWT</artifactId>
+  	<version>2.5.40-SNAPSHOT</version>
+  	<scope>runtime</scope>
+  	<type>war</type>
+  </dependency>
+  <dependency>
+  	<groupId>fi.weblogogwt</groupId>
+  	<artifactId>WebLogoGWT</artifactId>
+  	<version>0.0.9-SNAPSHOT</version>
+  	<type>war</type>
+  	<scope>runtime</scope>
+  </dependency>
   </dependencies>
 </project>
