@@ -216,19 +216,19 @@
   	<dependency>
   		<groupId>fi.mozarch</groupId>
   		<artifactId>mozarch</artifactId>
-  		<version>0.0.4-SNAPSHOT</version>
+  		<version>0.0.5-SNAPSHOT</version>
   		<scope>runtime</scope>
   	</dependency>
   	<dependency>
   		<groupId>fi.tegels</groupId>
   		<artifactId>tegels</artifactId>
-  		<version>0.0.4-SNAPSHOT</version>
+  		<version>0.0.5-SNAPSHOT</version>
   		<scope>runtime</scope>
   	</dependency>
   	<dependency>
   		<groupId>fi.geomalgebra</groupId>
   		<artifactId>geomalgebra</artifactId>
-  		<version>0.0.4-SNAPSHOT</version>
+  		<version>0.0.5-SNAPSHOT</version>
   		<scope>runtime</scope>
   	</dependency>
   	<dependency>
@@ -301,7 +301,7 @@
   	<dependency>
   		<groupId>fi.verknippen</groupId>
   		<artifactId>verknippen</artifactId>
-  		<version>0.0.4-SNAPSHOT</version>
+  		<version>0.0.5-SNAPSHOT</version>
   		<scope>runtime</scope>
   	</dependency>
   	<dependency>
@@ -441,5 +441,10 @@
    		<artifactId>spot_problems_dwo</artifactId>
    		<version>0.0.4-SNAPSHOT</version>
    	</dependency>
+	<dependency>
+   		<groupId>nl.numworx.stream</groupId>
+		<artifactId>stream</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</dependency>
   </dependencies>
 </project>
