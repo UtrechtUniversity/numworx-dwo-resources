@@ -146,6 +146,20 @@
   		<artifactId>wiskopdr</artifactId>
   		<version>2.0.3-SNAPSHOT</version>
   		<scope>runtime</scope>
+  		<exclusions>
+  			<exclusion>
+  				<groupId>org.geogebra</groupId>
+  				<artifactId>geogebra</artifactId>
+  			</exclusion>
+  			<exclusion>
+  				<groupId>org.geogebra</groupId>
+  				<artifactId>geogebra_cas</artifactId>
+  			</exclusion>
+  			<exclusion>
+  				<groupId>org.geogebra</groupId>
+  				<artifactId>geogebra_main</artifactId>
+  			</exclusion>
+  		</exclusions>
   	</dependency>
   	<dependency>
   		<groupId>fi.javalogoweb</groupId>
@@ -345,67 +359,133 @@
   		<artifactId>geogebra</artifactId>
   		<version>4.0.29-SNAPSHOT</version>
   		<scope>runtime</scope>
+  		<exclusions>
+  			<exclusion>
+  				<groupId>org.geogebra</groupId>
+  				<artifactId>geogebra</artifactId>
+  			</exclusion>
+  		</exclusions>
   	</dependency>
    	<dependency>
   		<groupId>nl.numworx.geogebra</groupId>
   		<artifactId>geogebra_cas</artifactId>
   		<version>4.0.29-SNAPSHOT</version>
   		<scope>runtime</scope>
-  	</dependency>
+  		<exclusions>
+  			<exclusion>
+  				<groupId>org.geogebra</groupId>
+  				<artifactId>geogebra_cas</artifactId>
+  			</exclusion>
+  		</exclusions>
+   	</dependency>
   	<dependency>
   		<groupId>nl.numworx.geogebra</groupId>
   		<artifactId>geogebra_export</artifactId>
   		<version>4.0.29-SNAPSHOT</version>
   		<scope>runtime</scope>
+  		<exclusions>
+  			<exclusion>
+  				<groupId>org.geogebra</groupId>
+  				<artifactId>geogebra_export</artifactId>
+  			</exclusion>
+  		</exclusions>
   	</dependency>
   	<dependency>
   		<groupId>nl.numworx.geogebra</groupId>
   		<artifactId>geogebra_gui</artifactId>
   		<version>4.0.29-SNAPSHOT</version>
   		<scope>runtime</scope>
+  		<exclusions>
+  			<exclusion>
+  				<groupId>org.geogebra</groupId>
+  				<artifactId>geogebra_gui</artifactId>
+  			</exclusion>
+  		</exclusions>
   	</dependency>
   	<dependency>
   		<groupId>nl.numworx.geogebra</groupId>
   		<artifactId>geogebra_main</artifactId>
   		<version>4.0.29-SNAPSHOT</version>
   		<scope>runtime</scope>
+  		<exclusions>
+  			<exclusion>
+  				<groupId>org.geogebra</groupId>
+  				<artifactId>geogebra_main</artifactId>
+  			</exclusion>
+  		</exclusions>
   	</dependency>
   	<dependency>
   		<groupId>nl.numworx.geogebra</groupId>
   		<artifactId>geogebra_properties</artifactId>
   		<version>4.0.29-SNAPSHOT</version>
   		<scope>runtime</scope>
+  		<exclusions>
+  			<exclusion>
+  				<groupId>org.geogebra</groupId>
+  				<artifactId>geogebra_properties</artifactId>
+  			</exclusion>
+  		</exclusions>
   	</dependency>
   	<dependency>
   		<groupId>nl.numworx.geogebra</groupId>
   		<artifactId>geogebra_algos</artifactId>
   		<version>4.0.29-SNAPSHOT</version>
   		<scope>runtime</scope>
+  		<exclusions>
+  			<exclusion>
+  				<groupId>org.geogebra</groupId>
+  				<artifactId>geogebra_algos</artifactId>
+  			</exclusion>
+  		</exclusions>
   	</dependency>
   	<dependency>
   		<groupId>nl.numworx.geogebra</groupId>
   		<artifactId>geogebra_javascript</artifactId>
   		<version>4.0.29-SNAPSHOT</version>
   		<scope>runtime</scope>
- 	</dependency>
+  		<exclusions>
+  			<exclusion>
+  				<groupId>org.geogebra</groupId>
+  				<artifactId>geogebra_javascript</artifactId>
+  			</exclusion>
+  		</exclusions>
+  	</dependency>
    	<dependency>
   		<groupId>nl.numworx.geogebra</groupId>
   		<artifactId>jlatexmath</artifactId>
   		<version>4.0.29-SNAPSHOT</version>
   		<scope>runtime</scope>
-  	</dependency>
+  		<exclusions>
+  			<exclusion>
+  				<groupId>org.geogebra</groupId>
+  				<artifactId>jlatexmath</artifactId>
+  			</exclusion>
+  		</exclusions>
+   	</dependency>
    	<dependency>
   		<groupId>nl.numworx.geogebra</groupId>
   		<artifactId>jlm_greek</artifactId>
   		<version>4.0.29-SNAPSHOT</version>
   		<scope>runtime</scope>
-  	</dependency>
+  		<exclusions>
+  			<exclusion>
+  				<groupId>org.geogebra</groupId>
+  				<artifactId>jlm_greek</artifactId>
+  			</exclusion>
+  		</exclusions>
+   	</dependency>
    	<dependency>
   		<groupId>nl.numworx.geogebra</groupId>
   		<artifactId>jlm_cyrillic</artifactId>
   		<version>4.0.29-SNAPSHOT</version>
   		<scope>runtime</scope>
-  	</dependency>
+  		<exclusions>
+  			<exclusion>
+  				<groupId>org.geogebra</groupId>
+  				<artifactId>jlm_cyrillic</artifactId>
+  			</exclusion>
+  		</exclusions>
+   	</dependency>
    	<dependency>
    		<groupId>nl.numworx.aimodel</groupId>
    		<artifactId>aimodel</artifactId>
