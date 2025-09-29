@@ -140,5 +140,47 @@
   	<scope>runtime</scope>
   	<type>war</type>
   </dependency>
+  <dependency>
+  	<groupId>fi.binomverdgwt</groupId>
+  	<artifactId>BinomVerdGWT</artifactId>
+  	<version>0.0.9-SNAPSHOT</version>
+  	<type>war</type>
+  	<scope>runtime</scope>
+  </dependency>
+  <dependency>
+  	<groupId>fi.calculatorgwt</groupId>
+  	<artifactId>CalculatorGWT</artifactId>
+  	<version>0.0.9-SNAPSHOT</version>
+  	<type>war</type>
+  	<scope>runtime</scope>
+  </dependency>
+  <dependency>
+  	<groupId>fi.doorziengwt</groupId>
+  	<artifactId>DoorzienGWT</artifactId>
+  	<version>0.0.9-SNAPSHOT</version>
+  	<type>war</type>
+  	<scope>runtime</scope>
+  </dependency>
+  <dependency>
+  	<groupId>fi.draaibankgwt</groupId>
+  	<artifactId>DraaibankGWT</artifactId>
+  	<version>0.0.9-SNAPSHOT</version>
+  	<type>war</type>
+  	<scope>runtime</scope>
+  </dependency>
+  <dependency>
+  	<groupId>fi.geomalggwt</groupId>
+  	<artifactId>GeomAlgGWT</artifactId>
+  	<version>0.0.9-SNAPSHOT</version>
+  	<type>war</type>
+  	<scope>runtime</scope>
+  </dependency>
+  <dependency>
+  	<groupId>fi.grafiek3dgwt</groupId>
+  	<artifactId>Grafiek3DGWT</artifactId>
+  	<version>0.0.9-SNAPSHOT</version>
+  	<type>war</type>
+  	<scope>runtime</scope>
+  </dependency>
   </dependencies>
 </project>
