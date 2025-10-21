@@ -1,0 +1,550 @@
+.profile-header {
+        background-color: $headerbackground !important;
+		-webkit-box-shadow: none !important;
+		box-shadow: none !important;
+}
+
+.profile-headerIcon, .profile-headerIcon svg {
+	color: $color5 !important;
+	fill:  $color5 !important;
+}
+
+.profile-headerLabel, .profile-headerLabel > span {
+	color: $headercolor !important;
+}
+
+#mainPanel > header .profile-headerLabel#headertrails {
+	font-size: 15px;
+	color: $color3 !important; 
+	a {
+		color: $color3;
+	}
+}
+
+.profile-headerLogo {
+	margin-top: 0px !important;
+	img {
+		display:none;
+	}
+}
+.profile-headerLogo::before {
+	color: $headercolor;
+	content: $headerTitle; /* Wiskunde online */
+	font-size: 18px;
+	display: inline-block;
+	width: 100px;
+}
+
+.profile-body { 
+	background-color: $color3 !important;
+	color: $color2 !important;
+	box-shadow: none !important;
+	
+	.contentScrollPanel {
+		background-color: $content !important;
+	}
+}
+
+.profile-navigation {
+	color: $navigationcolor !important;
+	background-color: $color6 !important;
+	box-shadow: none !important;
+}
+
+.profile-tile {
+	border-bottom-color: $tileheaderbackground !important;
+}
+.profile-tileHeader {
+	background-color: $tileheaderbackground !important;
+}
+.profile-tileBody {
+	background-color: white !important;
+}
+.profile-tile:hover .profile-tileHeader {
+	background-color: $color1 !important;
+}
+div:hover > .profile-tile .profile-tileBody {
+	border-bottom-color: $color1 !important;
+}
+
+.profile-tileFooter {
+	background-color: transparent !important;
+}
+
+.profile-subheader {
+	box-shadow: none !important;
+}
+
+.profile-subheaderLabel {
+	color: $color1 !important;
+}
+.profile-subheaderLogo {
+	background-color: $color4 !important;
+}
+.lesstof .profile-subheaderType::before {
+	content: $lesstof !important;
+}
+
+.toets .profile-subheaderType::before {
+	content: $toets !important;
+}
+
+.profile-navigationFOLDER::before {
+	content: $folder !important;
+}
+.profile-navigationMODULE::before {
+	content: $module !important;
+}
+.profile-navigationSCO::before {
+	content: $sco !important;
+}
+
+.profile-login {
+	background-color: $loginbackground;
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content }
+  &:-moz-placeholder           { @content }
+  &::-moz-placeholder          { @content }
+  &:-ms-input-placeholder      { @content }  
+}
+
+
+.profile-loginPanel {
+    background-color: $color1;
+	color: $color4;
+	
+	input {
+		background-color: $color3;
+		color: $color1;
+		@include placeholder {
+			color: $color4;
+		}
+	}	
+	button, input[type="submit"] {
+		background-color: $color4;
+		color: $color2;		
+	}
+	
+	input::placeholder {
+			color: $color4;
+	}
+}
+
+.profile-loginLinks {
+	color: $color1;
+	a {
+		color: $color1;
+	}
+}
+
+.profile-loginLogo {
+	display: none;
+}
+
+.modernstyle .profile-loginLogo {
+	display:block;
+	visibility: hidden;
+}
+
+.profile-loginTitle {
+	&::before {
+		content: $headerTitle;
+		width: 800px;
+		color: $color1;
+		overflow: visible;
+		font-size: 60px;
+		font-family: Ubuntu, sans-serif;
+		font-weight: bold;
+		margin-left: -70px;
+		display: inline-block;
+	}
+	p {
+		display: none
+	}
+}
+
+.profile-popup {
+	border-color: $color1 !important;
+	box-shadow: none !important;
+	
+	.profile-infopanel {
+		color: $textcolor;
+		background-color: $content;
+
+		.profile-infopanel-west {
+			background-image: $info;
+		}
+	}
+}
+
+.profile-tileInfo {
+	background-image: $info !important;
+}
+
+.modernstyle {
+	div.filter-dialog {
+	  z-index: 600;
+	 .popupContent {
+		background: $color4;
+		.header {
+			color: $color1;
+		}
+	}
+	}
+	#mainPanel {
+		background-color: $color7;
+		.subpanel, table.dwo.results thead tr:nth-child(1) th:first-child:before {
+			background-color: #eff1f3;
+		}
+		table.dwo.sortable, table.dwo.results {
+			thead {
+				tr:nth-child(3) th {
+					background-color: $color4;
+				}				 
+				
+			 tr.headers {
+				background-color: transparent;
+				th:first-child {
+					background-color: transparent;	
+				}
+				&::before {
+					background-color: $color4;
+				}
+			}
+			}
+		}
+		table.dwo.results.alternativeHeader thead {
+			tr:nth-child(2) th span {
+				color: $color1;
+				background-color: white;
+			}
+			tr.sorting, tr.headers {
+				background-color: transparent;
+				th:first-child {
+					background-color: transparent;	
+				}
+			}
+			tr.sorting::after, tr.headers::before {
+				background-color: white;
+			}
+
+			tr:nth-child(3) th {
+				background-color: white;
+			}				 
+
+		
+		}
+		
+	}
+}
+
+#mainPanel, .filter-dialog {
+
+.options .option label {
+	color: white;
+	background-color: $color4;
+}
+
+h1, h3, label.buttonLabel, label, table thead tr th {
+	color: $color1; 
+}
+p, div.gwt-Label {
+	color: $textcolor; 
+}
+
+h2.sectionhead span  {
+	background-color: $color1 !important; 
+}
+
+section.dialog {
+	background-color: $color3;
+	h4 {
+		background-color: $color1; 
+	}
+    &.alert h4 {
+		background-color: red;
+	}
+}
+
+input[type="text"], input[type="password"], select, .options .option label, table.dwo tbody {
+	border: 2px $color1 solid;
+}
+
+.checkbox input:checked ~ label.icon {
+  background-color: $color1;
+  border: 2px $color1 solid;
+}
+
+input[type="submit"].danger, input[type="button"].danger, button.danger, .pseudobutton.danger, label.pseudobutton.danger {
+  background-color: red;
+  border-color: red;
+}
+
+input[type="submit"], input[type="button"], button, .pseudobutton, label.pseudobutton,
+	.options .option input:checked ~ label
+ {
+	border: 2px $color1 solid;
+	background-color: $color1;
+	color: white;
+}
+
+nav {
+	background-color: $color7;
+	ul.WELCOME 		 li a[href="#WELCOME"], 
+	ul.RESULTS 		 li a[href="#RESULTS"], 
+	ul.KNOWLEDGE 	 li a[href="#KNOWLEDGE"],
+	ul.PERSONS 		 li a[href="#PERSONS"], 
+	ul.SCHOOLCLASSES li a[href="#SCHOOLCLASSES"], 
+	ul.MODULES 		 li a[href="#MODULES"], 
+	ul.ORGANISATION  li a[href="#ORGANISATION"], 
+	ul.CHATBOX 		 li a[href="#CHATBOX"]
+	 {
+    	color: $selectcolor !important;
+		svg use { 
+			fill: $selectcolor !important;
+		}
+	}
+	ul.WELCOME li a[href="#WELCOME"] span.icon {
+		background-color: $selectcolor;
+	}
+
+	ul.KNOWLEDGE li a[href="#KNOWLEDGE"] svg.icon use {
+		fill: $selectcolor !important;
+	}
+	
+	ul li a:hover {
+		color: $selectcolor;
+		svg.icon use {
+			fill: $selectcolor;
+		}
+		&[href='#WELCOME'] {
+			span.icon {
+				color: white;
+				background-color: $selectcolor;
+			}
+		}
+	}
+}
+h2.helpheader {
+	color: $color1;
+	background-color: $color4;
+}
+
+.subpanel header section#help.active h2.helpheader {
+  background-color: $color4;
+  border-left-color: $color1;
+}
+.subpanel header section#help.active .content {
+  border-left-color: $color1;
+}
+.subpanel header section#help .content {
+  background-color: $color5;
+}
+
+unset
+h1.sectionhead, .subpanel header, .subpanel header section#help h2.helpheader {
+	border-bottom: 1px $color1 solid;
+}
+
+header #accountMenuBox {
+	background-color: $color1;
+	#accountMenuSchoolName, #accountMenuUserRole, #accountMenuPresentationName {
+		color: $color4;
+	}
+}
+
+#welcomeDisplayPanel {
+	background-color: $color3;
+	a {
+		color: $textcolor;
+	}
+}
+
+table.dwo thead tr th .sortButton .icon use {
+  fill: $color5;
+}
+table.dwo thead tr th .sortButton.active .icon use {
+  fill: $color1;
+}
+
+table.dwo.sortable, table.dwo.results {
+	tbody {
+		border-top: none;
+	}
+	thead {
+	border-left: 2px $color1 solid;
+	border-right: 2px $color1 solid;
+	border-top: 2px $color1 solid;
+
+	tr.sorting, tr.headers {
+		background-color: $color4;
+		th:first-child {
+			background-color: $color4;	
+		}
+	}
+	
+}
+}
+
+
+table.dwo.results{
+	thead {
+		tr:nth-child(1) {				
+			th, th:first-child {
+				background-color: $color1;
+				color: white !important;
+			}
+		}
+		tr:nth-child(2) th span {
+			color: $color2;
+			background-color: $color4;
+			border-color: $color5;
+			&.active a {
+				color: $color1;
+				&:after {
+					background: transparent none;
+					content: "▸";
+					font-size: 150%;
+				}
+			
+			}
+			
+		}
+	}
+	&.alternativeHeader thead {
+		tr:nth-child(2) th span {
+			color: $color1;
+			background-color: white;
+		}
+		tr.sorting, tr.headers {
+			background-color: white;
+			th:first-child {
+				background-color: white;	
+			}
+		}
+	}
+}
+
+.lightbox a {
+	color: $color1;
+	.icon use {
+		fill: $color1;
+	}	
+}
+.lightbox a:hover {
+	color: $color2;
+	.icon use {
+		fill: $color2;
+	}	
+}
+
+.filterIndicators.active {
+	border-bottom-color: $color1;
+}
+
+}
+/* chatbox */
+#eastheader .checkbox span input:checked ~ label {
+	background-color: $color1;		
+	border-color: $color1;
+}
+
+.profile-borderBox, table.dwo tbody {
+	border-color: $color1 !important;
+}
+
+i.send.fa, div.filter-title {
+	background-color: $color1;	
+}
+table.dwo thead th, span.klasnaam, .eastheader, div.header.gwt-Label, .description-title, .lightbox header, a.backlink, h2#selectedResultsTitle {
+	color: $color1 !important;
+}
+
+a.backlink svg.icon, #selectedResultsDisplay svg.icon.btn { 
+	use {
+		fill: $color1 !important;
+	}
+}
+
+.profile-mymessage {
+	background-color: $color5 !important;
+}
+
+
+div.date-Label {
+    background-image: linear-gradient(180deg, transparent, transparent 16px, $color1 16px, $color1 18px, transparent 18px, transparent 34px);
+
+	div.gwt-Label {
+		color: $color1;
+	}
+}
+
+/* navigatiebalk */
+
+.navigatiebalk {
+	.myPushButton {
+		background-color: $color1;
+	}	
+	.scoreBtn .nr {
+		background-color: $color4;
+	}
+	.myPushButton-disabled {
+		background-color: #d2d2d2;
+	}
+	.scoreBtn.scoreBtn-max0 .nr {
+		background-color: #c0c0c0;
+	}
+	.scoreBtn.scoreBtn-cursor .nr {
+		background-color: $color1;
+	}
+	.shiftBtn, .spaceShiftLabel {
+		color: $color4;
+		border-color: $color4;
+	}
+	.score, .navigatiebalkLabel {
+		color: $color1;
+	}
+	.spaceLabel {
+		background-image: linear-gradient(180deg, 
+ 		#ffffff, #ffffff 16px, $color4 16px, $color4 18px, #ffffff 18px, #ffffff 34px); 
+
+	}
+}
+
+
+.modernstyle #mainPanel {
+	table.dwo {
+		thead {
+			tr.sorting th:first-child {
+				background-color: transparent;
+			}
+			tr.sorting::after {
+				background-color: $color4;
+				
+			}
+		}
+		tbody {
+			border-style: none;
+			border-width: 0px;
+		}
+		tbody::before, tbody::after {
+			border-color: $color1;
+		}
+	}
+	
+}
+
+.modernstyle {
+	.gwt-DialogBox.gwt-DialogBox-Node
+	{
+		.dialogMiddleRight,.dialogMiddleLeft,
+		.dialogBottomCenter,.dialogBottomLeft,.dialogBottomRight,
+		.dialogTopLeft,.dialogTopRight,.dialogTopCenter
+		{ 
+			background-color: $color1;
+		}
+	} 
+}
+

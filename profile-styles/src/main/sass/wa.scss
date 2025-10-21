@@ -1,0 +1,312 @@
+//@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+//@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*
+ * numworx.css
+ */
+$headerTitle: 'Wiskunde Actief';
+
+$color1 : #056C89;
+$color2 : #023653;
+$color3 : #FFFFFF;
+$color4 : #88B4B1;
+$color5 : #C3E4E9;
+$color6 : $color1;
+$color7 : #78AAB4;
+$content: $color7;
+$loginbackground: #023653B3;
+$headerbackground: $color1;
+$textcolor: black;
+$headercolor: white;
+$tileheaderbackground: $color4;
+$selectcolor: $color2;
+$navigationcolor: white;
+
+
+$toets  : url('toets-inf.svg');
+$lesstof: url('lesstof-inf.svg');
+
+$module: url('module-wa.svg');
+$folder: url('folder-wa.svg');
+$sco:    url('activiteit-wa.svg');
+$info:   url('info-wa.svg');
+
+@import "_template.scss";
+
+
+.profile-headerLogo::before {
+	content: '';
+	background-image: url('wiskunde-actief-logo.png');
+	background-size: 150px 45px;
+	background-repeat: no-repeat;
+	height: 45px;
+	width: 180px;
+}
+.profile-loginTitle::before {
+	content: '';
+	background-image: url('wiskunde-actief-logo.png');
+	background-size: 300px 100px;
+	background-repeat: no-repeat;
+	height: 100px;
+	
+}
+body:not(.modernstyle) #modulesDisplayPanel {
+	position: absolute;
+//	right: 54px;
+	width: unset;
+//	left: 54px;
+}
+
+body.ANONYMOUS section#modulesDisplayPanel {
+	left: 0px !important;
+}
+
+.modernstyle {
+	#modulesDisplayPanel {
+		top: 0px;
+		bottom: 0px;
+	}
+	#welcomeDisplayPanel section {
+		padding-top: 130px;
+	}
+}
+.modernstyle main#mainPanel nav.open {
+	top: 72px;
+}
+
+body.ANONYMOUS.modernstyle #mainPanel > header #menuToggle {
+	display: none;
+}
+
+section.profile-login {
+	background-color: $loginbackground;
+	background-image: linear-gradient(#02365300,$loginbackground), url('leerlingen.jpg');
+	background-size: cover;
+}
+
+main#mainPanel.expandedNav nav {
+  background-color: $color7;
+  box-shadow: none;
+  top: 72px;
+}
+
+@media (min-width: 1366px) { 
+	body.modernstyle:not(.collapsed) #mainPanel nav {
+    	background-color: $color7;
+    	box-shadow: none;
+    	top: 72px;
+	}
+}
+
+//.modernstyle main#mainPanel:not(.expandedNav) nav:not(.open) {
+//	top: 130px;
+//}
+
+main#mainPanel {
+  background-color: white;
+  > header {
+	background-image: linear-gradient(#36859A, $color7);
+	height: 62px;
+	padding-top: 10px;
+	#mainrole {
+		vertical-align: 20px;
+	}
+  }
+  nav {
+	top: 72px;
+	ul {
+		margin-left: 14px;
+		li.profile-welcome {
+			display: list-item;
+			
+		}
+		li a {
+		color: white;
+		.icon {
+			background-color: white;
+			use {
+				fill: $color1;
+			}
+		 	.fa-inverse {
+    			color: white;
+    			background-color: $color1;
+			}
+		}
+		span.icon {
+			background-color: $color1;
+		}
+		
+		
+		
+		}
+  	}
+  }
+  .subpanel header {
+	top: 72px;
+	.pageIcon {
+		display: none;
+  	}
+  }
+  .subpanel.iframepanel {
+	padding-top: 72px;
+  }
+ 
+  table.dwo.results thead tr:nth-child(1) th:first-child:before {
+	background-color: white;
+  }
+}
+
+
+
+body:not(.modernstyle) {
+	#mainPanel.expandedNav nav ul {
+		margin-top: 18px;
+	}
+	.subpanel header {
+		left: 54px;
+		div.content {
+			margin-left: 18px;
+		}
+	}
+}
+
+
+@media only screen and (min-width: 1366px) {
+	#modulesDisplayPanel {
+		left: 212px;
+		right:212px;
+	}
+	.subpanel header {
+		left: 212px;
+	}
+	main#mainPanel nav {
+	  box-shadow: none;
+	  ul {
+//			margin-top: 18px;
+	  }
+	}
+}
+
+@media only screen and (max-width: 1650px) {
+	
+	body:not(.modernstyle) {
+		main#mainPanel {
+			&.expandedNav .subpanel {
+			header {
+				left: 212px;
+			}
+		}		
+		nav {
+		width: 54px;
+			ul li a .name {
+    		display: none;
+		}
+
+		}
+		.subpanel {
+		margin-right: -54px;	
+		header {
+			left: 54px;
+		}
+	}
+	
+	}
+	}
+	main#mainPanel {
+	&.expandedNav .subpanel {
+		margin-right: -212px;
+	}
+	nav {
+		ul li a .name {
+    		line-height: 26px;
+		}
+	}
+	
+	.subpanel {
+		margin-right: -54px;	
+	}
+	#modulesDisplayPanel {
+		left: 54px;
+		right: 54px;
+	}
+}}
+
+//html {
+//	font-family: "Montserrat", sans-serif !important;
+//}
+
+//#mainPanel {
+//	button, input[type='submit'] {
+//		font-family: "Poppins", sans-serif !important;
+//	}
+//}
+#mainPanel nav ul li a .icon use {
+	fill: $color5;
+}
+
+#loginDisplayPanel .container .profile-loginTitle::before {
+	color: white;
+//	font-family: 'Montserrat';
+}
+
+div#loginBox {
+	left: 0px !important;
+	.profile-loginPanel {
+    	background-color: transparent;
+		color: white;
+		padding: 0px !important;
+	}
+
+	.profile-loginLinks {
+		color: white;
+		a {
+			color: white;
+		}
+	}
+}
+
+
+//#mainPanel {
+//	p, div.gwt-Label {
+//		font-family: 'Poppins'; 
+//	}
+//}
+
+body input[type="submit"], input[type="button"], button, .pseudobutton, label.pseudobutton
+{
+	border-radius: 15px;
+}
+
+
+.profile-loginForm::before {
+	content: 'Inloggen';
+	font-size: 20px;
+	font-weight: bold;
+	display: block;
+	color: white;
+}
+.profile-loginUser::before {
+	content: 'Gebruikersnaam:';
+	font-size: 15px;
+	color: white;
+	margin-top: 20px;
+	display: inline-block;
+}
+.profile-loginPass::before {
+	content: 'Wachtwoord:';
+	font-size: 15px;
+	color: white;
+	margin-top: 20px;
+	display: inline-block;
+}
+
+.gwt-Tree .gwt-TreeItem-selected {
+	background: $color5 !important;
+	color: $color2;
+}
+
+.navCellList.cellListWidget .cellListSelectedItem,
+.navCellList.cellListWidget  .cellListEvenItem:hover, 
+.navCellList.cellListWidget  .cellListOddItem:hover {
+	background: $color5 !important;
+	color: $color2 !important;
+}
