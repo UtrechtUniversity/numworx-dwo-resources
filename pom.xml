@@ -25,6 +25,8 @@
     <modules>
 	<module>cds-war</module>
 	<module>apps-war</module>
+	<module>profile-styles</module>
+	<module>CDSDocker</module>
     </modules>
     
     
