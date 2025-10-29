@@ -26,6 +26,12 @@
 			<version>${project.version}</version>
 			<type>war</type>
 		</dependency>
+		<dependency>
+			<artifactId>app-install</artifactId>
+			<groupId>${project.groupId}</groupId>
+			<version>0.0.9-SNAPSHOT</version>
+			<type>war</type>
+		</dependency>
 	</dependencies>
 	<build>
 		<pluginManagement>
@@ -91,6 +97,13 @@
 												</includes>
 												<outputDirectory>.</outputDirectory>
 												<outputFileNameMapping>apps.war</outputFileNameMapping>
+											</dependencySet>
+											<dependencySet>
+												<includes>
+													<include>${project.groupId}:app-install</include>
+												</includes>
+												<outputDirectory>.</outputDirectory>
+												<outputFileNameMapping>bundles.war</outputFileNameMapping>
 											</dependencySet>
 										</dependencySets>
 									</inline>
