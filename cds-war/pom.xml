@@ -128,18 +128,6 @@
   	</plugins>
 
   </build>
-  <distributionManagement>
-	<repository>
-	   <id>release</id>
-	   <name>libs-release-local</name>
-	   <url>https://repos.dwo.nl/artifactory/libs-release-local</url>
-	</repository>
-	<snapshotRepository>
-	   <id>snapshots</id>
-	   <name>libs-snapshot-local</name>
-	   <url>https://repos.dwo.nl/artifactory/libs-snapshot-local</url>
-	</snapshotRepository>
-  </distributionManagement>
   <dependencies>
   	<dependency>
   		<groupId>fi.wiskopdr</groupId>

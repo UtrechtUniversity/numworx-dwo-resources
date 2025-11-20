@@ -20,7 +20,7 @@
 		<s3>file://${env.HOME}/Public</s3>
 		<s3id>dev</s3id>
 		<remote>scp://gemini.science.uu.nl</remote>
-		<remoteDir>/science/wwwprojects/FI-Sites/www-dev/dwo/apps/css</remoteDir>
+		<remoteDir>/science/wwwprojects/FI-Sites/www/dwo/apps/css</remoteDir>
     </properties>
     <build>
     	<finalName>${project.artifactId}</finalName>
