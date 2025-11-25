@@ -102,25 +102,58 @@
 		          </execution>
 		        </executions>
 		      </plugin>
-			<plugin>
-				<groupId>biz.aQute.bnd</groupId>
-				<artifactId>bnd-indexer-maven-plugin</artifactId>
-				<version>5.3.0</version>
+<!--			<plugin>-->
+<!--				<groupId>biz.aQute.bnd</groupId>-->
+<!--				<artifactId>bnd-indexer-maven-plugin</artifactId>-->
+<!--				<version>5.3.0</version>-->
+<!--				<executions>-->
+<!--					<execution>-->
+<!--						<id>local-index</id>-->
+<!--						<goals>-->
+<!--							<goal>local-index</goal>-->
+<!--						</goals>-->
+<!--						<phase>prepare-package</phase>-->
+<!--						<configuration>-->
+<!--							<inputDir>${project.build.directory}/${project.artifactId}/jars/</inputDir>-->
+<!--							<outputFile>${project.build.directory}/${project.artifactId}/jars/index.xml</outputFile>-->
+<!--							<indexName>dwo-jars</indexName>-->
+<!--						</configuration>-->
+<!--					</execution>-->
+<!--				</executions>-->
+<!--			</plugin>-->
+			<plugin> <!-- NIET ZOMAAR WEGGOOIEN! -->
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>exec-maven-plugin</artifactId>
+				<version>3.5.0</version>
 				<executions>
 					<execution>
 						<id>local-index</id>
 						<goals>
-							<goal>local-index</goal>
+							<goal>java</goal>
 						</goals>
 						<phase>prepare-package</phase>
-						<configuration>
-							<inputDir>${project.build.directory}/${project.artifactId}/jars/</inputDir>
-							<outputFile>${project.build.directory}/${project.artifactId}/jars/index.xml</outputFile>
-							<indexName>dwo-jars</indexName>
-						</configuration>
 					</execution>
 				</executions>
+				<dependencies>
+					<dependency>
+						<groupId>fi.microserver</groupId>
+						<artifactId>microindex</artifactId>
+						<version>0.1.2-SNAPSHOT</version>
+					</dependency>
+				</dependencies>
+				<configuration>
+					<mainClass>fi.microserver.microindex.Main</mainClass>
+					<includeProjectDependencies>false</includeProjectDependencies>
+					<includePluginDependencies>true</includePluginDependencies>
+					<addOutputToClasspath>false</addOutputToClasspath>
+					<addResourcesToClasspath>false</addResourcesToClasspath>
+					<arguments>
+						<argument>${project.build.directory}/${project.build.finalName}/jars</argument>
+					</arguments>
+					<blockSystemExit>true</blockSystemExit>
+				</configuration>
 			</plugin>
+
   			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-war-plugin</artifactId>
@@ -168,11 +201,25 @@
   		<version>0.0.4-SNAPSHOT</version>
   		<scope>runtime</scope>
   	</dependency>
-  	<dependency>
+   	<dependency>
+  		<groupId>fi.javalogoweb</groupId>
+  		<artifactId>javalogoweb</artifactId>
+  		<version>0.0.4-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  		<type>jar.pack.gz</type>
+  	</dependency>
+ 	<dependency>
   		<groupId>fi.kansbomen</groupId>
   		<artifactId>kansbomen</artifactId>
   		<version>0.0.4-SNAPSHOT</version>
   		<scope>runtime</scope>
+  	</dependency>
+ 	<dependency>
+  		<groupId>fi.kansbomen</groupId>
+  		<artifactId>kansbomen</artifactId>
+  		<version>0.0.4-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  		<type>jar.pack.gz</type>
   	</dependency>
   	<dependency>
   		<groupId>nl.numworx.repl</groupId>
@@ -181,10 +228,24 @@
   		<scope>runtime</scope>
   	</dependency>
   	<dependency>
+  		<groupId>nl.numworx.repl</groupId>
+  		<artifactId>repl</artifactId>
+  		<version>0.0.4-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  		<type>jar.pack.gz</type>
+  	</dependency>
+  	<dependency>
   		<groupId>fi.statsim</groupId>
   		<artifactId>statsim</artifactId>
   		<version>0.0.4-SNAPSHOT</version>
   		<scope>runtime</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>fi.statsim</groupId>
+  		<artifactId>statsim</artifactId>
+  		<version>0.0.4-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  		<type>jar.pack.gz</type>
   	</dependency>
   	<dependency>
   		<groupId>fi.previewhtml</groupId>
@@ -210,17 +271,31 @@
   		<version>2.5.47-SNAPSHOT</version>
   		<scope>runtime</scope>
   	</dependency>
-  	<dependency>
+   	<dependency>
   		<groupId>fi.draaibank</groupId>
   		<artifactId>draaibank</artifactId>
   		<version>0.0.4-SNAPSHOT</version>
   		<scope>runtime</scope>
   	</dependency>
-  	<dependency>
+   	<dependency>
+  		<groupId>fi.draaibank</groupId>
+  		<artifactId>draaibank</artifactId>
+  		<version>0.0.4-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  		<type>jar.pack.gz</type>
+  	</dependency>
+ 	<dependency>
   		<groupId>fi.algebrapijlenopdr</groupId>
   		<artifactId>algebrapijlenopdr</artifactId>
   		<version>0.0.4-SNAPSHOT</version>
   		<scope>runtime</scope>
+  	</dependency>
+ 	<dependency>
+  		<groupId>fi.algebrapijlenopdr</groupId>
+  		<artifactId>algebrapijlenopdr</artifactId>
+  		<version>0.0.4-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  		<type>jar.pack.gz</type>
   	</dependency>
   	<dependency>
   		<groupId>fi.algebraexpressies</groupId>
@@ -228,7 +303,14 @@
   		<version>0.0.4-SNAPSHOT</version>
   		<scope>runtime</scope>
   	</dependency>
-  	<dependency>
+   	<dependency>
+  		<groupId>fi.algebraexpressies</groupId>
+  		<artifactId>algebraexpressies</artifactId>
+  		<version>0.0.4-SNAPSHOT</version>
+  		<type>jar.pack.gz</type>
+  		<scope>runtime</scope>
+  	</dependency>
+ 	<dependency>
   		<groupId>nl.numworx.samllogin</groupId>
   		<artifactId>samllogin</artifactId>
   		<version>0.0.6-SNAPSHOT</version>
@@ -241,10 +323,24 @@
   		<scope>runtime</scope>
   	</dependency>
   	<dependency>
+  		<groupId>fi.mozarch</groupId>
+  		<artifactId>mozarch</artifactId>
+  		<version>0.0.5-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  		<type>jar.pack.gz</type>
+  	</dependency>
+  	<dependency>
   		<groupId>fi.tegels</groupId>
   		<artifactId>tegels</artifactId>
   		<version>0.0.5-SNAPSHOT</version>
   		<scope>runtime</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>fi.tegels</groupId>
+  		<artifactId>tegels</artifactId>
+  		<version>0.0.5-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  		<type>jar.pack.gz</type>
   	</dependency>
   	<dependency>
   		<groupId>fi.geomalgebra</groupId>
@@ -253,9 +349,29 @@
   		<scope>runtime</scope>
   	</dependency>
   	<dependency>
+  		<groupId>fi.geomalgebra</groupId>
+  		<artifactId>geomalgebra</artifactId>
+  		<version>0.0.5-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  		<type>jar.pack.gz</type>
+  	</dependency>
+  	<dependency>
   		<groupId>fi.stroomdiagrammen</groupId>
   		<artifactId>stroomdiagrammen</artifactId>
   		<version>0.0.5-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>fi.stroomdiagrammen</groupId>
+  		<artifactId>stroomdiagrammen</artifactId>
+  		<version>0.0.5-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  		<type>jar.pack.gz</type>
+  	</dependency>
+  	<dependency>
+  		<groupId>fi.doorziendwo</groupId>
+  		<artifactId>doorziendwo</artifactId>
+  		<version>0.0.4-SNAPSHOT</version>
   		<scope>runtime</scope>
   	</dependency>
   	<dependency>
@@ -263,6 +379,7 @@
   		<artifactId>doorziendwo</artifactId>
   		<version>0.0.4-SNAPSHOT</version>
   		<scope>runtime</scope>
+  		<type>jar.pack.gz</type>
   	</dependency>
   	<dependency>
   		<groupId>fi.wiskopdr</groupId>
@@ -324,6 +441,13 @@
   		<artifactId>verknippen</artifactId>
   		<version>0.0.5-SNAPSHOT</version>
   		<scope>runtime</scope>
+  	</dependency>
+  	<dependency>
+  		<groupId>fi.verknippen</groupId>
+  		<artifactId>verknippen</artifactId>
+  		<version>0.0.5-SNAPSHOT</version>
+  		<scope>runtime</scope>
+  		<type>jar.pack.gz</type>
   	</dependency>
   	<dependency>
   		<groupId>nl.numworx.geogebra</groupId>
@@ -504,9 +628,21 @@
    		<version>0.0.4-SNAPSHOT</version>
    	</dependency>
    	<dependency>
+   		<groupId>fi.binomverdeling</groupId>
+   		<artifactId>binomverdeling</artifactId>
+   		<version>0.0.4-SNAPSHOT</version>
+   		<type>jar.pack.gz</type>
+   	</dependency>
+   	<dependency>
    		<groupId>fi.heks</groupId>
    		<artifactId>heks</artifactId>
    		<version>0.0.4-SNAPSHOT</version>
+   	</dependency>
+   	<dependency>
+   		<groupId>fi.heks</groupId>
+   		<artifactId>heks</artifactId>
+   		<version>0.0.4-SNAPSHOT</version>
+   		<type>jar.pack.gz</type>
    	</dependency>
    	<dependency>
    		<groupId>fi.grafiek3dtest</groupId>
@@ -514,9 +650,21 @@
    		<version>0.0.4-SNAPSHOT</version>
    	</dependency>
    	<dependency>
+   		<groupId>fi.grafiek3dtest</groupId>
+   		<artifactId>grafiek3dtest</artifactId>
+   		<version>0.0.4-SNAPSHOT</version>
+   		<type>jar.pack.gz</type>
+   	</dependency>
+   	<dependency>
    		<groupId>fi.kladje</groupId>
    		<artifactId>kladje</artifactId>
    		<version>1.0.3-SNAPSHOT</version>
+   	</dependency>
+   	<dependency>
+   		<groupId>fi.kladje</groupId>
+   		<artifactId>kladje</artifactId>
+   		<version>1.0.3-SNAPSHOT</version>
+   		<type>jar.pack.gz</type>
    	</dependency>
    	<dependency>
    		<groupId>fi.javalogoweb3d</groupId>
@@ -524,9 +672,21 @@
    		<version>0.0.4-SNAPSHOT</version>
    	</dependency>
    	<dependency>
+   		<groupId>fi.javalogoweb3d</groupId>
+   		<artifactId>javalogoweb3d</artifactId>
+   		<version>0.0.4-SNAPSHOT</version>
+   		<type>jar.pack.gz</type>
+   	</dependency>
+   	<dependency>
    		<groupId>fi.spot_problems_dwo</groupId>
    		<artifactId>spot_problems_dwo</artifactId>
    		<version>0.0.4-SNAPSHOT</version>
+   	</dependency>
+   	<dependency>
+   		<groupId>fi.spot_problems_dwo</groupId>
+   		<artifactId>spot_problems_dwo</artifactId>
+   		<version>0.0.4-SNAPSHOT</version>
+   		<type>jar.pack.gz</type>
    	</dependency>
 	<dependency>
    		<groupId>nl.numworx.stream</groupId>
