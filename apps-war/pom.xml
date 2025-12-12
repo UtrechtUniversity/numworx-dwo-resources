@@ -81,7 +81,7 @@
   </dependency>
   <dependency>
 	    <groupId>nl.numworx.stream</groupId>
-  		<artifactId>StreamGWT</artifactId>
+  		<artifactId>streamgwt</artifactId>
   		<type>war</type>
   		<version>1.0.0-SNAPSHOT</version>
   		<scope>runtime</scope>
