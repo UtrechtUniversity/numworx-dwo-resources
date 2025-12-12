@@ -53,21 +53,21 @@
   </dependency>
   <dependency>
   	<groupId>nl.uu.fi.dwo.mobile</groupId>
-  	<artifactId>WiskOpdrPlayer</artifactId>
-  	<version>2.5.47-SNAPSHOT</version>
+  	<artifactId>wiskopdrplayer</artifactId>
+  	<version>2.5.47</version>
   	<scope>runtime</scope>
   	<type>war</type>
   </dependency>
   <dependency>
   	<groupId>nl.numworx.leerdoelwidget</groupId>
-  	<artifactId>LeerdoelWidgetGWT</artifactId>
+  	<artifactId>leerdoelwidgetgwt</artifactId>
   	<version>2.5.47-SNAPSHOT</version>
   	<scope>runtime</scope>
   	<type>war</type>
   </dependency>
   <dependency>
   	<groupId>fi.weblogogwt</groupId>
-  	<artifactId>WebLogoGWT</artifactId>
+  	<artifactId>weblogogwt</artifactId>
   	<version>0.0.9-SNAPSHOT</version>
   	<type>war</type>
   	<scope>runtime</scope>
@@ -75,7 +75,7 @@
   <dependency>
     <groupId>nl.numworx.uploadwidget</groupId>
     <artifactId>uploadwidgetgwt</artifactId>
-    <version>2.5.47-SNAPSHOT</version>
+    <version>2.5.47</version>
   	<scope>runtime</scope>
   	<type>war</type>
   </dependency>
@@ -88,105 +88,105 @@
   </dependency>
   <dependency>
 	  	<groupId>nl.numworx.geodefinergwt</groupId>
-		<artifactId>GeoDefinerGWT</artifactId>
+		<artifactId>geodefinergwt</artifactId>
 		<version>0.0.6-SNAPSHOT</version>
 		<type>war</type>
 		<scope>runtime</scope>
   </dependency>
   <dependency>
 	  	<groupId>fi.graphtoolgwt</groupId>
-		<artifactId>GraphToolGWT</artifactId>
+		<artifactId>graphtoolgwt</artifactId>
 		<type>war</type>
 		<version>2.5.42-SNAPSHOT</version>
 		<scope>runtime</scope>
   </dependency>
   <dependency>
 	    <groupId>nl.numworx.replgwt</groupId>
- 		<artifactId>ReplGWT</artifactId>
+ 		<artifactId>replgwt</artifactId>
   		<type>war</type>
   		<version>0.0.3-SNAPSHOT</version>
 		<scope>runtime</scope>
   </dependency>
   <dependency>
   	<groupId>nl.numworx.aimodelgwt</groupId>
-  	<artifactId>AIModelGWT</artifactId>
+  	<artifactId>aimodelgwt</artifactId>
   	<version>0.0.3-SNAPSHOT</version>
   	<scope>runtime</scope>
   	<type>war</type>
   </dependency>
   <dependency>
   	<groupId>fi.algebraexprgwt</groupId>
-  	<artifactId>AlgebraExprGWT</artifactId>
+  	<artifactId>algebraexprgwt</artifactId>
   	<version>0.0.9-SNAPSHOT</version>
   	<type>war</type>
   	<scope>runtime</scope>
   </dependency>
   <dependency>
   	<groupId>fi.algebrapijlengwt</groupId>
-  	<artifactId>AlgebraPijlenGWT</artifactId>
+  	<artifactId>algebrapijlengwt</artifactId>
   	<version>0.0.9-SNAPSHOT</version>
   	<scope>runtime</scope>
   	<type>war</type>
   </dependency>
   <dependency>
   	<groupId>fi.balansfruitgwt</groupId>
-  	<artifactId>BalansFruitGWT</artifactId>
+  	<artifactId>balansfruitgwt</artifactId>
   	<version>0.0.9-SNAPSHOT</version>
   	<scope>runtime</scope>
   	<type>war</type>
   </dependency>
   <dependency>
   	<groupId>fi.binomverdgwt</groupId>
-  	<artifactId>BinomVerdGWT</artifactId>
+  	<artifactId>binomverdgwt</artifactId>
   	<version>0.0.9-SNAPSHOT</version>
   	<type>war</type>
   	<scope>runtime</scope>
   </dependency>
   <dependency>
   	<groupId>fi.calculatorgwt</groupId>
-  	<artifactId>CalculatorGWT</artifactId>
+  	<artifactId>calculatorgwt</artifactId>
   	<version>0.0.9-SNAPSHOT</version>
   	<type>war</type>
   	<scope>runtime</scope>
   </dependency>
   <dependency>
   	<groupId>fi.doorziengwt</groupId>
-  	<artifactId>DoorzienGWT</artifactId>
+  	<artifactId>doorziengwt</artifactId>
   	<version>0.0.9-SNAPSHOT</version>
   	<type>war</type>
   	<scope>runtime</scope>
   </dependency>
   <dependency>
   	<groupId>fi.draaibankgwt</groupId>
-  	<artifactId>DraaibankGWT</artifactId>
+  	<artifactId>draaibankgwt</artifactId>
   	<version>0.0.9-SNAPSHOT</version>
   	<type>war</type>
   	<scope>runtime</scope>
   </dependency>
   <dependency>
   	<groupId>fi.geomalggwt</groupId>
-  	<artifactId>GeomAlgGWT</artifactId>
+  	<artifactId>geomalggwt</artifactId>
   	<version>0.0.9-SNAPSHOT</version>
   	<type>war</type>
   	<scope>runtime</scope>
   </dependency>
   <dependency>
   	<groupId>fi.grafiek3dgwt</groupId>
-  	<artifactId>Grafiek3DGWT</artifactId>
+  	<artifactId>grafiek3dgwt</artifactId>
   	<version>0.0.9-SNAPSHOT</version>
   	<type>war</type>
   	<scope>runtime</scope>
   </dependency>
   <dependency>
   	<groupId>fi.heksgwt</groupId>
-  	<artifactId>HeksGWT</artifactId>
+  	<artifactId>heksgwt</artifactId>
   	<version>0.0.9-SNAPSHOT</version>
   	<type>war</type>
   	<scope>runtime</scope>
   </dependency>
   <dependency>
   	<groupId>fi.kansbomengwt</groupId>
-  	<artifactId>KansbomenGWT</artifactId>
+  	<artifactId>kansbomengwt</artifactId>
   	<version>0.0.9-SNAPSHOT</version>
   	<type>war</type>
   	<scope>runtime</scope>
@@ -200,112 +200,112 @@
   </dependency>
   <dependency>
   	<groupId>fi.mozarchgwt</groupId>
-  	<artifactId>MozarchGWT</artifactId>
+  	<artifactId>mozarchgwt</artifactId>
   	<version>0.0.9-SNAPSHOT</version>
   	<type>war</type>
   	<scope>runtime</scope>
   </dependency>
   <dependency>
   	<groupId>fi.nabouwenaanzichtengwt</groupId>
-  	<artifactId>NabouwenAanzichtenGWT</artifactId>
+  	<artifactId>nabouwenaanzichtengwt</artifactId>
   	<version>0.0.9-SNAPSHOT</version>
   	<type>war</type>
   	<scope>runtime</scope>
   </dependency>
   <dependency>
   	<groupId>fi.normverdgwt</groupId>
-  	<artifactId>NormVerdGWT</artifactId>
+  	<artifactId>normverdgwt</artifactId>
   	<version>0.0.9-SNAPSHOT</version>
   	<type>war</type>
   	<scope>runtime</scope>
   </dependency>
   <dependency>
   	<groupId>nl.uu.fi.dwo.mobile</groupId>
-  	<artifactId>PrintPlayer</artifactId>
-  	<version>2.5.47-SNAPSHOT</version>
+  	<artifactId>printplayer</artifactId>
+  	<version>2.5.47</version>
   	<scope>runtime</scope>
   	<type>war</type>
   </dependency>
   <dependency>
   	<groupId>nl.numworx.sqlitegwt</groupId>
-  	<artifactId>SQLiteGWT</artifactId>
+  	<artifactId>sqlitegwt</artifactId>
   	<version>0.0.3-SNAPSHOT</version>
   	<type>war</type>
   	<scope>runtime</scope>
   </dependency>
   <dependency>
   	<groupId>fi.sliderwidgetgwt</groupId>
-  	<artifactId>SliderWidgetGWT</artifactId>
+  	<artifactId>sliderwidgetgwt</artifactId>
   	<version>0.0.9-SNAPSHOT</version>
   	<type>war</type>
   	<scope>runtime</scope>
   </dependency>
   <dependency>
   	<groupId>fi.statistiekgwt</groupId>
-  	<artifactId>StatistiekGWT</artifactId>
+  	<artifactId>statistiekgwt</artifactId>
   	<version>0.0.9-SNAPSHOT</version>
   	<type>war</type>
   	<scope>runtime</scope>
   </dependency>
   <dependency>
   	<groupId>fi.stippelpatronengwt</groupId>
-  	<artifactId>StippelPatronenGWT</artifactId>
+  	<artifactId>stippelpatronengwt</artifactId>
   	<version>0.0.9-SNAPSHOT</version>
   	<type>war</type>
   	<scope>runtime</scope>
   </dependency>
   <dependency>
   	<groupId>fi.stroomdiagrammengwt</groupId>
-  	<artifactId>StroomDiagrammenGWT</artifactId>
+  	<artifactId>stroomdiagrammengwt</artifactId>
   	<version>0.0.9-SNAPSHOT</version>
   	<type>war</type>
   	<scope>runtime</scope>
   </dependency>
   <dependency>
   	<groupId>fi.tegelsleggengwt</groupId>
-  	<artifactId>TegelsLeggenGWT</artifactId>
+  	<artifactId>tegelsleggengwt</artifactId>
   	<version>0.0.9-SNAPSHOT</version>
   	<type>war</type>
   	<scope>runtime</scope>
   </dependency>
   <dependency>
   	<groupId>fi.tekenveelvlakgwt</groupId>
-  	<artifactId>TekenVeelvlakGWT</artifactId>
+  	<artifactId>tekenveelvlakgwt</artifactId>
   	<version>0.0.9-SNAPSHOT</version>
   	<type>war</type>
   	<scope>runtime</scope>
   </dependency>
   <dependency>
   	<groupId>fi.verknippengwt</groupId>
-  	<artifactId>VerknippenGWT</artifactId>
+  	<artifactId>verknippengwt</artifactId>
   	<version>0.0.9-SNAPSHOT</version>
   	<type>war</type>
   	<scope>runtime</scope>
   </dependency>
   <dependency>
   	<groupId>fi.weblogo3dgwt</groupId>
-  	<artifactId>WebLogo3dGWT</artifactId>
+  	<artifactId>weblogo3dgwt</artifactId>
   	<version>0.0.9-SNAPSHOT</version>
   	<type>war</type>
   	<scope>runtime</scope>
   </dependency>
   <dependency>
   	<groupId>nl.uu.fi.dwo.mobile</groupId>
-  	<artifactId>WidgetPlayer</artifactId>
-  	<version>2.5.47-SNAPSHOT</version>
+  	<artifactId>widgetplayer</artifactId>
+  	<version>2.5.47</version>
   	<type>war</type>
   	<scope>runtime</scope>
   </dependency>
   <dependency>
   	<groupId>nl.numworx.notebook</groupId>
   	<artifactId>notebookgwt</artifactId>
-  	<version>2.5.47-SNAPSHOT</version>
+  	<version>2.5.47</version>
   	<type>war</type>
   	<scope>runtime</scope>
   </dependency>
   <dependency>
   	<groupId>fi.statsimgwt</groupId>
-  	<artifactId>StatSimGWT</artifactId>
+  	<artifactId>statsimgwt</artifactId>
   	<version>0.0.9-SNAPSHOT</version>
   	<scope>runtime</scope>
   	<type>war</type>
