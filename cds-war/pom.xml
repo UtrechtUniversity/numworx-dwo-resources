@@ -708,5 +708,86 @@
   		  <artifactId>wiskopdrbeans</artifactId>
 		  <version>1.0.3-SNAPSHOT</version>
 	</dependency>
+	<dependency>
+		<groupId>fi.calculatordwo</groupId>
+		<artifactId>calculatordwo</artifactId>
+		<version>0.0.4-SNAPSHOT</version>
+	</dependency>
+	<dependency>
+		<groupId>fi.nabouwenaanzichten</groupId>
+		<artifactId>nabouwenaanzichten</artifactId>
+		<version>1.0.3-SNAPSHOT</version>
+	</dependency>
+	<dependency>
+		<groupId>fi.normaleverdeling</groupId>
+		<artifactId>normaleverdeling</artifactId>
+		<version>0.0.4-SNAPSHOT</version>
+	</dependency>
+	<dependency>
+		<groupId>fi.sliderwidget</groupId>
+		<artifactId>sliderwidget</artifactId>
+		<version>0.0.4-SNAPSHOT</version>
+	</dependency>
+	<dependency>
+		<groupId>fi.tekenveelvlakopdr</groupId>
+		<artifactId>tekenveelvlakopdr</artifactId>
+		<version>1.0.3-SNAPSHOT</version>
+	</dependency>
+	<dependency>
+		<groupId>fi.geodefull</groupId>
+		<artifactId>geodefull</artifactId>
+		<version>0.0.4-SNAPSHOT</version>
+	</dependency>
+	<dependency>
+		<groupId>fi.ivmdraw</groupId>
+		<artifactId>ivmdraw</artifactId>
+		<version>0.0.4-SNAPSHOT</version>
+	</dependency>
+	
+	<dependency>
+		<groupId>fi.calculatordwo</groupId>
+		<artifactId>calculatordwo</artifactId>
+		<version>0.0.4-SNAPSHOT</version>
+   		<type>jar.pack.gz</type>
+	</dependency>
+	<dependency>
+		<groupId>fi.nabouwenaanzichten</groupId>
+		<artifactId>nabouwenaanzichten</artifactId>
+		<version>1.0.3-SNAPSHOT</version>
+   		<type>jar.pack.gz</type>
+	</dependency>
+	<dependency>
+		<groupId>fi.normaleverdeling</groupId>
+		<artifactId>normaleverdeling</artifactId>
+		<version>0.0.4-SNAPSHOT</version>
+   		<type>jar.pack.gz</type>
+	</dependency>
+	<dependency>
+		<groupId>fi.sliderwidget</groupId>
+		<artifactId>sliderwidget</artifactId>
+		<version>0.0.4-SNAPSHOT</version>
+   		<type>jar.pack.gz</type>
+	</dependency>
+	<dependency>
+		<groupId>fi.tekenveelvlakopdr</groupId>
+		<artifactId>tekenveelvlakopdr</artifactId>
+		<version>1.0.3-SNAPSHOT</version>
+   		<type>jar.pack.gz</type>
+	</dependency>
+	<dependency>
+		<groupId>fi.geodefull</groupId>
+		<artifactId>geodefull</artifactId>
+		<version>0.0.4-SNAPSHOT</version>
+   		<type>jar.pack.gz</type>
+	</dependency>
+	<dependency>
+		<groupId>fi.ivmdraw</groupId>
+		<artifactId>ivmdraw</artifactId>
+		<version>0.0.4-SNAPSHOT</version>
+   		<type>jar.pack.gz</type>
+	</dependency>
+	
+	
+	
   </dependencies>
 </project>
