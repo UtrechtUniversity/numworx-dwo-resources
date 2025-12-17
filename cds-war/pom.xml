@@ -14,6 +14,15 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
+	<pluginRepositories>
+		<pluginRepository>
+	      <id>numworx-dwo-project</id>
+	      <url>https://maven.pkg.github.com/UtrechtUniversity/numworx-dwo-project</url>
+	      <snapshots>
+			  <enabled>true</enabled>
+		  </snapshots>			
+		</pluginRepository>
+	</pluginRepositories>
   <build>
 	<finalName>${project.artifactId}</finalName>
     <plugins>
@@ -74,11 +83,11 @@
 		                  <destinationFile>${project.build.directory}/${project.artifactId}/jars/geodefiner.jar</destinationFile>
 		                </fileSet>
 		                <fileSet>
-		                  <sourceFile>${project.build.directory}/${project.artifactId}/jars/proguard-geogebra3widget.jar</sourceFile>
+		                  <sourceFile>${project.build.directory}/${project.artifactId}/jars/proguard-geogebraoldwidget.jar</sourceFile>
 		                  <destinationFile>${project.build.directory}/${project.artifactId}/jars/geogebra3widget.jar</destinationFile>
 		                </fileSet>                
 		                <fileSet>
-		                  <sourceFile>${project.build.directory}/${project.artifactId}/jars/proguard-geogebra4widget.jar</sourceFile>
+		                  <sourceFile>${project.build.directory}/${project.artifactId}/jars/proguard-geogebranew.jar</sourceFile>
 		                  <destinationFile>${project.build.directory}/${project.artifactId}/jars/geogebra4widget.jar</destinationFile>
 		                </fileSet>                
 		                <fileSet>
@@ -138,7 +147,7 @@
 					<dependency>
 						<groupId>fi.microserver</groupId>
 						<artifactId>microindex</artifactId>
-						<version>0.1.2-SNAPSHOT</version>
+						<version>2.5.47</version>
 					</dependency>
 				</dependencies>
 				<configuration>
@@ -421,14 +430,14 @@
   		<artifactId>proguard</artifactId>
   		<version>2.0.3-SNAPSHOT</version>
   		<scope>runtime</scope>
-  		<classifier>geogebra3widget</classifier>
+  		<classifier>geogebraold</classifier>
   	</dependency>
   	<dependency>
   		<groupId>fi.wiskopdr</groupId>
   		<artifactId>proguard</artifactId>
   		<version>2.0.3-SNAPSHOT</version>
   		<scope>runtime</scope>
-  		<classifier>geogebra4widget</classifier>
+  		<classifier>geogebranew</classifier>
   	</dependency>
   	<dependency>
   		<groupId>fi.wiskopdr</groupId>
