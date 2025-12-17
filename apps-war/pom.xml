@@ -193,7 +193,7 @@
   </dependency>
   <dependency>
   	<groupId>fi.kladjegwt</groupId>
-  	<artifactId>KladjeGWT</artifactId>
+  	<artifactId>kladjegwt</artifactId>
   	<version>0.0.9-SNAPSHOT</version>
   	<type>war</type>
   	<scope>runtime</scope>
