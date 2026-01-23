@@ -5,7 +5,7 @@
 	<properties>
 		<repository>numworx.azurecr.io/</repository>
 		<docker.platform>linux/amd64</docker.platform>
-		<docker.goal>build</docker.goal>
+		<docker.goal>help</docker.goal>
 	</properties>
 	<parent>
 		<groupId>nl.uu.fi.dwo</groupId>
@@ -65,6 +65,7 @@
                                                                 <id>default-build</id>
                                                                 <phase>install</phase>
                                                                 <goals>
+									<goal>build</goal>
                                                                         <goal>${docker.goal}</goal>
                                                                 </goals>
                                                         </execution>
