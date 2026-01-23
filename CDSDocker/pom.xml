@@ -5,6 +5,7 @@
 	<properties>
 		<repository>numworx.azurecr.io/</repository>
 		<docker.platform>linux/amd64</docker.platform>
+		<docker.goal>build</docker.goal>
 	</properties>
 	<parent>
 		<groupId>nl.uu.fi.dwo</groupId>
@@ -59,6 +60,15 @@
 				<artifactId>docker-maven-plugin</artifactId>
 				<version>0.43.4</version>
 				<extensions>true</extensions>
+                                               <executions>
+                                                        <execution>
+                                                                <id>default-build</id>
+                                                                <phase>install</phase>
+                                                                <goals>
+                                                                        <goal>${docker.goal}</goal>
+                                                                </goals>
+                                                        </execution>
+                                                </executions>
 		        <dependencies>
 		            <dependency>
 		                <groupId>com.amazonaws</groupId>
@@ -121,6 +131,7 @@
 						</image>
 					</images>
 				</configuration>
+				
 			</plugin>
 		</plugins>
 	</build>
@@ -153,6 +164,14 @@
 		<profile>
 			<id>azure</id>
 			<activation><activeByDefault>true</activeByDefault></activation>
+		</profile>
+		<profile>
+			<id>github</id>
+			<properties>
+				<docker.platform>linux/amd64,linux/arm64</docker.platform>
+				<repository>ghcr.io/utrechtuniversity/numworx-dwo-resources/</repository>
+				<docker.goal>push</docker.goal>
+			</properties>
 		</profile>
 	</profiles>
 </project>
