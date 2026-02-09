@@ -1,46 +1,50 @@
 # numworx-dwo-resources
-# Title of your code or analysis
 
-Provide a concise and informative title for your code or analysis that
-accurately reflects its content.
+All static resources for DWO services
 
 ## Introduction
 
-In this section, provide an overview of your code and describe the
-project in which the code was developed. Highlight the purpose,
-scope, and potential uses of your code. Also, consider including
-links to relevant publications or resources that provide additional
-context.
+This git repository builds the static webservice, which can uses as is, or as
+backend of a Content Delivery Network, like AWS Cloudfront of Azure FrontDoor.
+
 
 ## Prerequisites
+The maven build uses artifacts from the following repositories
+- numworx-dwo-author
+- numworx-gwt-widgets
+- numworx-dwo-project
 
-Include any necessary prerequisites for using your code, such as
-required datasets, specific software, dependencies or hardware
-requirements. For example: This project requires Python 3.8 or later
-and install the dependencies with `pip install -r
-requirements.txt`. 
+Build them first.
 
 ## Contents 
 
 ### Folder structure
 
-Describe the organization of your package, including the contents of
-each folder and the files it contains. Use tables or file trees to
-make it easy for users to understand your folder structure. Describe
-where results and figures are stored if not added to the project
-folder.
+This project is organized as follows:
+- CDSDocker. Build the tomcat static webserver container
+- cds-war. All additional resources for the authoring environment NumworxAuthor in a war.
+- apps-war. All additional resources for the web platform in a war.
+- profile-styles. All css resources that implements the skins for e.g. Wiskunde-Actief and Co-Teach. 
 
-### File formats 
+### Building 
 
-Describe the file format(s) used in your project and the software
-required to open them. 
+Everything is built through maven: `mvn install -Pgithub`
+
+**Note**
+- To push to a docker registry, please login first.
+- Enable multiplatform builds with buildx.
+- GitHub artifacts need authenticated access. Define the GITHUB_TOKEN environment variable with your *GITHUB_TOKEN*.
+
 
 ## Usage
 
-Provide clear and concise instructions on how to use your code.
-Include examples of how to execute the code and describe the expected
-output. If your work consists of multiple execution steps, provide
-detailed step-by-step instructions. 
+The main artifact is the container image **ghcr.io/utrechtuniversity/numworx-dwo-resources/cds**:*version* for linux/arm64 and linux/amd64 environments
+
+To run in a docker environment:
+
+    docker run -d -P 8080:8080 ghcr.io/utrechtuniversity/numworx-dwo-resources/cds:version
+
+In the git repository numworx-dwo-setup this image is run in a kubernetes cluster.
 
 ## License
 
@@ -52,14 +56,5 @@ For example:
 
 > This work is licensed under the MIT License.
 
-## Citation (optional)
-
-Provide clear instructions on how to cite your code or related
-publications in a research paper or publication. You can include the
-citation in the README file or create a separate CITATION.cff file. 
-
 ## Contact 
-
-Include contact information for questions or comments about your code.
-You can also provide clear instructions for how users can provide
-feedback, contribute, or suggest improvements to your work. 
+[Wim van Velthoven](mailto:w.p.g.vanvelthoven@uu.nl)
