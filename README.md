@@ -4,8 +4,9 @@ All static resources for DWO services
 
 ## Introduction
 
-This git repository builds the static webservice, which can uses as is, or as
+This git repository builds the static webservice, which can be used as is, or as a
 backend of a Content Delivery Network, like AWS Cloudfront of Azure FrontDoor.
+The CDN must implement CORS headers!
 
 
 ## Prerequisites
@@ -21,7 +22,7 @@ Build them first.
 ### Folder structure
 
 This project is organized as follows:
-- CDSDocker. Build the tomcat static webserver container
+- CDSDocker. Build the tomcat static webserver container image
 - cds-war. All additional resources for the authoring environment NumworxAuthor in a war.
 - apps-war. All additional resources for the web platform in a war.
 - profile-styles. All css resources that implements the skins for e.g. Wiskunde-Actief and Co-Teach. 
@@ -42,7 +43,7 @@ The main artifact is the container image **ghcr.io/utrechtuniversity/numworx-dwo
 
 To run in a docker environment:
 
-    docker run -d -P 8080:8080 ghcr.io/utrechtuniversity/numworx-dwo-resources/cds:version
+    docker run -d -p 8080:8080 --name cds ghcr.io/utrechtuniversity/numworx-dwo-resources/cds:version
 
 In the git repository numworx-dwo-setup this image is run in a kubernetes cluster.
 

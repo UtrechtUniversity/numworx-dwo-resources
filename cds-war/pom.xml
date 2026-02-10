@@ -83,7 +83,7 @@
 		                  <destinationFile>${project.build.directory}/${project.artifactId}/jars/geodefiner.jar</destinationFile>
 		                </fileSet>
 		                <fileSet>
-		                  <sourceFile>${project.build.directory}/${project.artifactId}/jars/proguard-geogebraoldwidget.jar</sourceFile>
+		                  <sourceFile>${project.build.directory}/${project.artifactId}/jars/proguard-geogebraold.jar</sourceFile>
 		                  <destinationFile>${project.build.directory}/${project.artifactId}/jars/geogebra3widget.jar</destinationFile>
 		                </fileSet>                
 		                <fileSet>
@@ -111,25 +111,6 @@
 		          </execution>
 		        </executions>
 		      </plugin>
-<!--			<plugin>-->
-<!--				<groupId>biz.aQute.bnd</groupId>-->
-<!--				<artifactId>bnd-indexer-maven-plugin</artifactId>-->
-<!--				<version>5.3.0</version>-->
-<!--				<executions>-->
-<!--					<execution>-->
-<!--						<id>local-index</id>-->
-<!--						<goals>-->
-<!--							<goal>local-index</goal>-->
-<!--						</goals>-->
-<!--						<phase>prepare-package</phase>-->
-<!--						<configuration>-->
-<!--							<inputDir>${project.build.directory}/${project.artifactId}/jars/</inputDir>-->
-<!--							<outputFile>${project.build.directory}/${project.artifactId}/jars/index.xml</outputFile>-->
-<!--							<indexName>dwo-jars</indexName>-->
-<!--						</configuration>-->
-<!--					</execution>-->
-<!--				</executions>-->
-<!--			</plugin>-->
 			<plugin> <!-- NIET ZOMAAR WEGGOOIEN! -->
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>exec-maven-plugin</artifactId>
@@ -277,7 +258,7 @@
   	<dependency>
   		<groupId>fi.wiskopdr</groupId>
   		<artifactId>uploadwidget</artifactId>
-  		<version>2.5.47-SNAPSHOT</version>
+  		<version>${dwoVersion}</version>
   		<scope>runtime</scope>
   	</dependency>
    	<dependency>
@@ -442,7 +423,7 @@
   	<dependency>
   		<groupId>fi.wiskopdr</groupId>
   		<artifactId>uploadwidgetrm</artifactId>
-  		<version>2.5.47-SNAPSHOT</version>
+  		<version>${dwoVersion}</version>
   		<scope>runtime</scope>
   	</dependency>
   	<dependency>
