@@ -128,7 +128,7 @@
 					<dependency>
 						<groupId>fi.microserver</groupId>
 						<artifactId>microindex</artifactId>
-						<version>2.5.47</version>
+						<version>${dwoVersion}</version>
 					</dependency>
 				</dependencies>
 				<configuration>
@@ -258,7 +258,7 @@
   	<dependency>
   		<groupId>fi.wiskopdr</groupId>
   		<artifactId>uploadwidget</artifactId>
-  		<version>${dwoVersion}</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   	</dependency>
    	<dependency>
@@ -423,7 +423,7 @@
   	<dependency>
   		<groupId>fi.wiskopdr</groupId>
   		<artifactId>uploadwidgetrm</artifactId>
-  		<version>${dwoVersion}</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   	</dependency>
   	<dependency>
