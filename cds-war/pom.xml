@@ -2,7 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>nl.uu.fi.dwo</groupId>
-		<version>2.5.47-SNAPSHOT</version>
+		<version>2.5.48-SNAPSHOT</version>
 		<relativePath>../</relativePath>
 		<artifactId>resources-parent</artifactId>
 	</parent>
@@ -159,7 +159,7 @@
   	<dependency>
   		<groupId>fi.wiskopdr</groupId>
   		<artifactId>proguard</artifactId>
-  		<version>2.0.3-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   		<exclusions>
   			<exclusion>
@@ -188,65 +188,65 @@
   	<dependency>
   		<groupId>fi.javalogoweb</groupId>
   		<artifactId>javalogoweb</artifactId>
-  		<version>0.0.4-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   	</dependency>
    	<dependency>
   		<groupId>fi.javalogoweb</groupId>
   		<artifactId>javalogoweb</artifactId>
-  		<version>0.0.4-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   		<type>jar.pack.gz</type>
   	</dependency>
  	<dependency>
   		<groupId>fi.kansbomen</groupId>
   		<artifactId>kansbomen</artifactId>
-  		<version>0.0.4-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   	</dependency>
  	<dependency>
   		<groupId>fi.kansbomen</groupId>
   		<artifactId>kansbomen</artifactId>
-  		<version>0.0.4-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   		<type>jar.pack.gz</type>
   	</dependency>
   	<dependency>
   		<groupId>nl.numworx.repl</groupId>
   		<artifactId>repl</artifactId>
-  		<version>0.0.4-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   	</dependency>
   	<dependency>
   		<groupId>nl.numworx.repl</groupId>
   		<artifactId>repl</artifactId>
-  		<version>0.0.4-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   		<type>jar.pack.gz</type>
   	</dependency>
   	<dependency>
   		<groupId>fi.statsim</groupId>
   		<artifactId>statsim</artifactId>
-  		<version>0.0.4-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   	</dependency>
   	<dependency>
   		<groupId>fi.statsim</groupId>
   		<artifactId>statsim</artifactId>
-  		<version>0.0.4-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   		<type>jar.pack.gz</type>
   	</dependency>
   	<dependency>
   		<groupId>fi.previewhtml</groupId>
   		<artifactId>previewhtml</artifactId>
-  		<version>0.0.6-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   	</dependency>
   	<dependency>
   		<groupId>nl.numworx.sqlite</groupId>
   		<artifactId>sqlite</artifactId>
-  		<version>0.0.4-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   	</dependency>
 		<dependency>
@@ -264,159 +264,159 @@
    	<dependency>
   		<groupId>fi.draaibank</groupId>
   		<artifactId>draaibank</artifactId>
-  		<version>0.0.4-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   	</dependency>
    	<dependency>
   		<groupId>fi.draaibank</groupId>
   		<artifactId>draaibank</artifactId>
-  		<version>0.0.4-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   		<type>jar.pack.gz</type>
   	</dependency>
  	<dependency>
   		<groupId>fi.algebrapijlenopdr</groupId>
   		<artifactId>algebrapijlenopdr</artifactId>
-  		<version>0.0.4-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   	</dependency>
  	<dependency>
   		<groupId>fi.algebrapijlenopdr</groupId>
   		<artifactId>algebrapijlenopdr</artifactId>
-  		<version>0.0.4-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   		<type>jar.pack.gz</type>
   	</dependency>
   	<dependency>
   		<groupId>fi.algebraexpressies</groupId>
   		<artifactId>algebraexpressies</artifactId>
-  		<version>0.0.4-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   	</dependency>
    	<dependency>
   		<groupId>fi.algebraexpressies</groupId>
   		<artifactId>algebraexpressies</artifactId>
-  		<version>0.0.4-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<type>jar.pack.gz</type>
   		<scope>runtime</scope>
   	</dependency>
  	<dependency>
   		<groupId>nl.numworx.samllogin</groupId>
   		<artifactId>samllogin</artifactId>
-  		<version>0.0.6-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   	</dependency>
   	<dependency>
   		<groupId>fi.mozarch</groupId>
   		<artifactId>mozarch</artifactId>
-  		<version>0.0.5-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   	</dependency>
   	<dependency>
   		<groupId>fi.mozarch</groupId>
   		<artifactId>mozarch</artifactId>
-  		<version>0.0.5-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   		<type>jar.pack.gz</type>
   	</dependency>
   	<dependency>
   		<groupId>fi.tegels</groupId>
   		<artifactId>tegels</artifactId>
-  		<version>0.0.5-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   	</dependency>
   	<dependency>
   		<groupId>fi.tegels</groupId>
   		<artifactId>tegels</artifactId>
-  		<version>0.0.5-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   		<type>jar.pack.gz</type>
   	</dependency>
   	<dependency>
   		<groupId>fi.geomalgebra</groupId>
   		<artifactId>geomalgebra</artifactId>
-  		<version>0.0.5-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   	</dependency>
   	<dependency>
   		<groupId>fi.geomalgebra</groupId>
   		<artifactId>geomalgebra</artifactId>
-  		<version>0.0.5-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   		<type>jar.pack.gz</type>
   	</dependency>
   	<dependency>
   		<groupId>fi.stroomdiagrammen</groupId>
   		<artifactId>stroomdiagrammen</artifactId>
-  		<version>0.0.5-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   	</dependency>
   	<dependency>
   		<groupId>fi.stroomdiagrammen</groupId>
   		<artifactId>stroomdiagrammen</artifactId>
-  		<version>0.0.5-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   		<type>jar.pack.gz</type>
   	</dependency>
   	<dependency>
   		<groupId>fi.doorziendwo</groupId>
   		<artifactId>doorziendwo</artifactId>
-  		<version>0.0.4-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   	</dependency>
   	<dependency>
   		<groupId>fi.doorziendwo</groupId>
   		<artifactId>doorziendwo</artifactId>
-  		<version>0.0.4-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   		<type>jar.pack.gz</type>
   	</dependency>
   	<dependency>
   		<groupId>fi.wiskopdr</groupId>
   		<artifactId>proguard</artifactId>
-  		<version>2.0.3-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   		<classifier>graphtool</classifier>
   	</dependency>
   	<dependency>
   		<groupId>fi.wiskopdr</groupId>
   		<artifactId>proguard</artifactId>
-  		<version>2.0.3-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   		<classifier>geodefiner</classifier>
   	</dependency>
   	<dependency>
   		<groupId>fi.wiskopdr</groupId>
   		<artifactId>proguard</artifactId>
-  		<version>2.0.3-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   		<classifier>mathscratch</classifier>
   	</dependency>
   	<dependency>
   		<groupId>fi.wiskopdr</groupId>
   		<artifactId>proguard</artifactId>
-  		<version>2.0.3-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   		<classifier>statistiek</classifier>
   	</dependency>
   	<dependency>
   		<groupId>fi.wiskopdr</groupId>
   		<artifactId>proguard</artifactId>
-  		<version>2.0.3-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   		<classifier>balansfruitapplet</classifier>
   	</dependency>
   	<dependency>
   		<groupId>fi.wiskopdr</groupId>
   		<artifactId>proguard</artifactId>
-  		<version>2.0.3-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   		<classifier>geogebraold</classifier>
   	</dependency>
   	<dependency>
   		<groupId>fi.wiskopdr</groupId>
   		<artifactId>proguard</artifactId>
-  		<version>2.0.3-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   		<classifier>geogebranew</classifier>
   	</dependency>
@@ -429,13 +429,13 @@
   	<dependency>
   		<groupId>fi.verknippen</groupId>
   		<artifactId>verknippen</artifactId>
-  		<version>0.0.5-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   	</dependency>
   	<dependency>
   		<groupId>fi.verknippen</groupId>
   		<artifactId>verknippen</artifactId>
-  		<version>0.0.5-SNAPSHOT</version>
+  		<version>${authorVersion}</version>
   		<scope>runtime</scope>
   		<type>jar.pack.gz</type>
   	</dependency>
@@ -610,72 +610,72 @@
    	<dependency>
    		<groupId>nl.numworx.aimodel</groupId>
    		<artifactId>aimodel</artifactId>
-   		<version>0.0.3-SNAPSHOT</version>
+   		<version>${authorVersion}</version>
    	</dependency>
    	<dependency>
    		<groupId>fi.binomverdeling</groupId>
    		<artifactId>binomverdeling</artifactId>
-   		<version>0.0.4-SNAPSHOT</version>
+   		<version>${authorVersion}</version>
    	</dependency>
    	<dependency>
    		<groupId>fi.binomverdeling</groupId>
    		<artifactId>binomverdeling</artifactId>
-   		<version>0.0.4-SNAPSHOT</version>
+   		<version>${authorVersion}</version>
    		<type>jar.pack.gz</type>
    	</dependency>
    	<dependency>
    		<groupId>fi.heks</groupId>
    		<artifactId>heks</artifactId>
-   		<version>0.0.4-SNAPSHOT</version>
+   		<version>${authorVersion}</version>
    	</dependency>
    	<dependency>
    		<groupId>fi.heks</groupId>
    		<artifactId>heks</artifactId>
-   		<version>0.0.4-SNAPSHOT</version>
+   		<version>${authorVersion}</version>
    		<type>jar.pack.gz</type>
    	</dependency>
    	<dependency>
    		<groupId>fi.grafiek3dtest</groupId>
    		<artifactId>grafiek3dtest</artifactId>
-   		<version>0.0.4-SNAPSHOT</version>
+   		<version>${authorVersion}</version>
    	</dependency>
    	<dependency>
    		<groupId>fi.grafiek3dtest</groupId>
    		<artifactId>grafiek3dtest</artifactId>
-   		<version>0.0.4-SNAPSHOT</version>
+   		<version>${authorVersion}</version>
    		<type>jar.pack.gz</type>
    	</dependency>
    	<dependency>
    		<groupId>fi.kladje</groupId>
    		<artifactId>kladje</artifactId>
-   		<version>1.0.3-SNAPSHOT</version>
+   		<version>${authorVersion}</version>
    	</dependency>
    	<dependency>
    		<groupId>fi.kladje</groupId>
    		<artifactId>kladje</artifactId>
-   		<version>1.0.3-SNAPSHOT</version>
+   		<version>${authorVersion}</version>
    		<type>jar.pack.gz</type>
    	</dependency>
    	<dependency>
    		<groupId>fi.javalogoweb3d</groupId>
    		<artifactId>javalogoweb3d</artifactId>
-   		<version>0.0.4-SNAPSHOT</version>
+   		<version>${authorVersion}</version>
    	</dependency>
    	<dependency>
    		<groupId>fi.javalogoweb3d</groupId>
    		<artifactId>javalogoweb3d</artifactId>
-   		<version>0.0.4-SNAPSHOT</version>
+   		<version>${authorVersion}</version>
    		<type>jar.pack.gz</type>
    	</dependency>
    	<dependency>
    		<groupId>fi.spot_problems_dwo</groupId>
    		<artifactId>spot_problems_dwo</artifactId>
-   		<version>0.0.4-SNAPSHOT</version>
+   		<version>${authorVersion}</version>
    	</dependency>
    	<dependency>
    		<groupId>fi.spot_problems_dwo</groupId>
    		<artifactId>spot_problems_dwo</artifactId>
-   		<version>0.0.4-SNAPSHOT</version>
+   		<version>${authorVersion}</version>
    		<type>jar.pack.gz</type>
    	</dependency>
 	<dependency>
@@ -696,84 +696,84 @@
 	<dependency>
 		  <groupId>fi.wiskopdr.beans</groupId>
   		  <artifactId>wiskopdrbeans</artifactId>
-		  <version>1.0.3-SNAPSHOT</version>
+		  <version>${authorVersion}</version>
 	</dependency>
 	<dependency>
 		<groupId>fi.calculatordwo</groupId>
 		<artifactId>calculatordwo</artifactId>
-		<version>0.0.4-SNAPSHOT</version>
+		<version>${authorVersion}</version>
 	</dependency>
 	<dependency>
 		<groupId>fi.nabouwenaanzichten</groupId>
 		<artifactId>nabouwenaanzichten</artifactId>
-		<version>1.0.3-SNAPSHOT</version>
+		<version>${authorVersion}</version>
 	</dependency>
 	<dependency>
 		<groupId>fi.normaleverdeling</groupId>
 		<artifactId>normaleverdeling</artifactId>
-		<version>0.0.4-SNAPSHOT</version>
+		<version>${authorVersion}</version>
 	</dependency>
 	<dependency>
 		<groupId>fi.sliderwidget</groupId>
 		<artifactId>sliderwidget</artifactId>
-		<version>0.0.4-SNAPSHOT</version>
+		<version>${authorVersion}</version>
 	</dependency>
 	<dependency>
 		<groupId>fi.tekenveelvlakopdr</groupId>
 		<artifactId>tekenveelvlakopdr</artifactId>
-		<version>1.0.3-SNAPSHOT</version>
+		<version>${authorVersion}</version>
 	</dependency>
 	<dependency>
 		<groupId>fi.geodefull</groupId>
 		<artifactId>geodefull</artifactId>
-		<version>0.0.4-SNAPSHOT</version>
+		<version>${authorVersion}</version>
 	</dependency>
 	<dependency>
 		<groupId>fi.ivmdraw</groupId>
 		<artifactId>ivmdraw</artifactId>
-		<version>0.0.4-SNAPSHOT</version>
+		<version>${authorVersion}</version>
 	</dependency>
 	
 	<dependency>
 		<groupId>fi.calculatordwo</groupId>
 		<artifactId>calculatordwo</artifactId>
-		<version>0.0.4-SNAPSHOT</version>
+		<version>${authorVersion}</version>
    		<type>jar.pack.gz</type>
 	</dependency>
 	<dependency>
 		<groupId>fi.nabouwenaanzichten</groupId>
 		<artifactId>nabouwenaanzichten</artifactId>
-		<version>1.0.3-SNAPSHOT</version>
+		<version>${authorVersion}</version>
    		<type>jar.pack.gz</type>
 	</dependency>
 	<dependency>
 		<groupId>fi.normaleverdeling</groupId>
 		<artifactId>normaleverdeling</artifactId>
-		<version>0.0.4-SNAPSHOT</version>
+		<version>${authorVersion}</version>
    		<type>jar.pack.gz</type>
 	</dependency>
 	<dependency>
 		<groupId>fi.sliderwidget</groupId>
 		<artifactId>sliderwidget</artifactId>
-		<version>0.0.4-SNAPSHOT</version>
+		<version>${authorVersion}</version>
    		<type>jar.pack.gz</type>
 	</dependency>
 	<dependency>
 		<groupId>fi.tekenveelvlakopdr</groupId>
 		<artifactId>tekenveelvlakopdr</artifactId>
-		<version>1.0.3-SNAPSHOT</version>
+		<version>${authorVersion}</version>
    		<type>jar.pack.gz</type>
 	</dependency>
 	<dependency>
 		<groupId>fi.geodefull</groupId>
 		<artifactId>geodefull</artifactId>
-		<version>0.0.4-SNAPSHOT</version>
+		<version>${authorVersion}</version>
    		<type>jar.pack.gz</type>
 	</dependency>
 	<dependency>
 		<groupId>fi.ivmdraw</groupId>
 		<artifactId>ivmdraw</artifactId>
-		<version>0.0.4-SNAPSHOT</version>
+		<version>${authorVersion}</version>
    		<type>jar.pack.gz</type>
 	</dependency>
 	
