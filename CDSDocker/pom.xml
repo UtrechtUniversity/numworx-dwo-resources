@@ -30,7 +30,7 @@
 		<dependency>
 			<artifactId>app-install</artifactId>
 			<groupId>${project.groupId}</groupId>
-			<version>0.0.9-SNAPSHOT</version>
+			<version>${bundleVersion}</version>
 			<type>war</type>
 		</dependency>
 	</dependencies>

@@ -15,6 +15,7 @@
 	  	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	  	<dwoVersion>2.5.48</dwoVersion>
 	  	<authorVersion>2.5.48</authorVersion>
+                <bundleVersion>2.5.48</bundleVersion>
     </properties>
   	<repositories>
             <repository>
