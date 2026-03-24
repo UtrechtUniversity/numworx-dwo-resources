@@ -25,12 +25,19 @@
               <id>numworx-dwo-author</id>
               <url>https://maven.pkg.github.com/UtrechtUniversity/numworx-dwo-author</url>
             </repository>
+            <repository>
+              <snapshots>
+                <enabled>true</enabled>
+              </snapshots>
+              <id>numworx-dwo-project</id>
+              <url>https://maven.pkg.github.com/UtrechtUniversity/numworx-dwo-project</url>
+            </repository>
 	    <repository>
 	      <snapshots>
 	        <enabled>true</enabled>
 	      </snapshots>
-	      <id>numworx-dwo-project</id>
-	      <url>https://maven.pkg.github.com/UtrechtUniversity/numworx-dwo-project</url>
+	      <id>numworx-dwo-runner</id>
+	      <url>https://maven.pkg.github.com/UtrechtUniversity/numworx-dwo-runner</url>
 	    </repository>
 	    <repository>
 	      <snapshots>
