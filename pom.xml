@@ -39,6 +39,13 @@
 	      <id>numworx-vendor-geogebra</id>
 	      <url>https://maven.pkg.github.com/UtrechtUniversity/numworx-vendor-geogebra</url>
 	    </repository>
+            <repository>
+              <snapshots>
+                <enabled>true</enabled>
+              </snapshots>
+              <id>numworx-gwt-widgets</id>
+              <url>https://maven.pkg.github.com/UtrechtUniversity/numworx-gwt-widgets</url>
+            </repository>
 	</repositories>
    
     <!-- should move project role names here that fall in the full project scope -->
