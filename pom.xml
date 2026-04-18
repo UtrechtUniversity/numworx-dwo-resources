@@ -57,6 +57,8 @@
    
     <!-- should move project role names here that fall in the full project scope -->
     <modules>
+	<module>resources-war</module>
+	<module>jars-war</module>
 	<module>cds-war</module>
 	<module>apps-war</module>
 	<module>profile-styles</module>

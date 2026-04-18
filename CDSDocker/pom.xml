@@ -27,6 +27,18 @@
 			<version>${project.version}</version>
 			<type>war</type>
 		</dependency>
+                <dependency>
+                        <artifactId>resources-war</artifactId>
+                        <groupId>${project.groupId}</groupId>
+                        <version>${project.version}</version>
+                        <type>war</type>
+                </dependency>
+                <dependency>
+                        <artifactId>jars-war</artifactId>
+                        <groupId>${project.groupId}</groupId>
+                        <version>${project.version}</version>
+                        <type>war</type>
+                </dependency>
 		<dependency>
 			<artifactId>app-install</artifactId>
 			<groupId>${project.groupId}</groupId>
@@ -116,7 +128,22 @@
 												<outputDirectory>.</outputDirectory>
 												<outputFileNameMapping>bundles.war</outputFileNameMapping>
 											</dependencySet>
-										</dependencySets>
+                                                                                        <dependencySet>
+                                                                                                <includes>
+                                                                                                        <include>${project.groupId}:resources-war</include>
+                                                                                                </includes>
+                                                                                                <outputDirectory>.</outputDirectory>
+                                                                                                <outputFileNameMapping>resources.war</outputFileNameMapping>
+                                                                                        </dependencySet>
+                                                                                        <dependencySet>
+                                                                                                <includes>
+                                                                                                        <include>${project.groupId}:jars-war</include>
+                                                                                                </includes>
+                                                                                                <outputDirectory>.</outputDirectory>
+                                                                                                <outputFileNameMapping>jars.war</outputFileNameMapping>
+                                                                                        </dependencySet>
+			
+							</dependencySets>
 									</inline>
 								</assembly>
 							</build>
