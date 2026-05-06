@@ -13,9 +13,7 @@
   	<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <dwoVersion>2.5.48</dwoVersion>
-    <authorVersion>2.5.48</authorVersion>
-    <gwtVersion>2.5.48</gwtVersion>
+    <gwtVersion>2.5.50</gwtVersion>
   </properties>
   <build>
 	<finalName>${project.artifactId}</finalName>
@@ -78,7 +76,7 @@
   <dependency>
     <groupId>nl.numworx.uploadwidget</groupId>
     <artifactId>uploadwidgetgwt</artifactId>
-    <version>${dwoVersion}</version>
+    <version>2.5.48</version>
   	<scope>runtime</scope>
   	<type>war</type>
   </dependency>
@@ -302,7 +300,7 @@
   <dependency>
   	<groupId>nl.numworx.notebook</groupId>
   	<artifactId>notebookgwt</artifactId>
-  	<version>${dwoVersion}</version>
+  	<version>2.5.48</version>
   	<type>war</type>
   	<scope>runtime</scope>
   </dependency>
