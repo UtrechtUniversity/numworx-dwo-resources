@@ -14,6 +14,7 @@ The maven build uses artifacts from the following repositories
 - numworx-dwo-author
 - numworx-gwt-widgets
 - numworx-dwo-project
+- numworx-dwo-runner
 
 Build them first.
 
@@ -23,7 +24,9 @@ Build them first.
 
 This project is organized as follows:
 - CDSDocker. Build the tomcat static webserver container image
-- cds-war. All additional resources for the authoring environment NumworxAuthor in a war.
+- cds-war. All additional resources for the authoring environment NumworxAuthor in a war. Combines resources-war and jars-war.
+- jars-war. All jars needed for NumworxAuthor
+- resources-war. All resources (images, properties, fonts, styling) for NumworxAuthor
 - apps-war. All additional resources for the web platform in a war.
 - profile-styles. All css resources that implements the skins for e.g. Wiskunde-Actief and Co-Teach. 
 
